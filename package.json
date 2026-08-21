@@ -1,0 +1,8 @@
+{
+  "name": "vnr-game-quiz",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "cd web && npm install && npm run build"
+  }
+}
