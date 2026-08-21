@@ -189,20 +189,20 @@
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 my-4 w-full max-w-3xl">
                 <div class="bg-surface-container border-2 border-burgundy-deep p-4 rounded-lg text-center">
-                    <div class="text-label-caps font-label-caps text-on-surface-variant uppercase">Lạm phát 1986</div>
-                    <div class="text-stat-value font-stat-value text-error-red">774.7%</div>
+                    <div class="text-label-caps font-label-caps text-on-surface-variant uppercase">Số câu hỏi</div>
+                    <div class="text-stat-value font-stat-value text-secondary">15</div>
                 </div>
                 <div class="bg-surface-container border-2 border-burgundy-deep p-4 rounded-lg text-center">
-                    <div class="text-label-caps font-label-caps text-on-surface-variant uppercase">Lạm phát 1995</div>
-                    <div class="text-stat-value font-stat-value text-success-green">12.7%</div>
+                    <div class="text-label-caps font-label-caps text-on-surface-variant uppercase">Thời gian / câu</div>
+                    <div class="text-stat-value font-stat-value text-error-red">15s</div>
                 </div>
                 <div class="bg-surface-container border-2 border-burgundy-deep p-4 rounded-lg text-center">
-                    <div class="text-label-caps font-label-caps text-on-surface-variant uppercase">Lương thực 1988</div>
-                    <div class="text-stat-value font-stat-value text-secondary">Nhập 450k tấn</div>
+                    <div class="text-label-caps font-label-caps text-on-surface-variant uppercase">Điểm mỗi câu</div>
+                    <div class="text-stat-value font-stat-value text-success-green">100</div>
                 </div>
                 <div class="bg-surface-container border-2 border-burgundy-deep p-4 rounded-lg text-center">
-                    <div class="text-label-caps font-label-caps text-on-surface-variant uppercase">Lương thực 1989+</div>
-                    <div class="text-stat-value font-stat-value text-success-green">Xuất khẩu lớn</div>
+                    <div class="text-label-caps font-label-caps text-on-surface-variant uppercase">Điểm tối đa</div>
+                    <div class="text-stat-value font-stat-value text-primary">1500</div>
                 </div>
             </div>
 
@@ -247,13 +247,18 @@
                     </span>
                 </div>
                 <div class="flex flex-col items-end gap-2 w-full md:w-1/3">
-                    <div class="flex justify-between w-full">
+                    <div class="flex justify-between items-center w-full gap-3">
                         <span class="text-label-caps font-label-caps text-error-red uppercase tracking-widest">THỜI GIAN</span>
-                        <span id="quiz-timer-val" class="text-stat-value font-stat-value text-error-red pulse-timer">00:15</span>
+                        <div class="flex items-center gap-2">
+                            <span id="quiz-timer-val" class="text-stat-value font-stat-value text-error-red pulse-timer">00:15</span>
+                            <button id="btn-pause-quiz" onclick="togglePause()" aria-label="Tạm dừng" title="Tạm dừng / Tiếp tục (phím P)" class="text-primary hover:text-secondary transition-colors cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed">
+                                <span id="pause-icon" class="material-symbols-outlined text-4xl">pause_circle</span>
+                            </button>
+                        </div>
                     </div>
                     <div class="w-full h-4 bg-charcoal border-2 border-burgundy-deep rounded-full overflow-hidden flex">
                         <!-- Progress Bar segmented -->
-                        <div id="quiz-timer-bar" class="h-full bg-error-red w-[100%] transition-all duration-1000 border-r border-burgundy-deep"></div>
+                        <div id="quiz-timer-bar" class="h-full bg-error-red w-full border-r border-burgundy-deep will-change-[width]"></div>
                         <div id="quiz-timer-bg" class="h-full bg-surface-variant w-[0%]"></div>
                     </div>
                 </div>
@@ -261,12 +266,8 @@
 
             <!-- Question Box -->
             <div class="w-full text-center py-10 px-6 bg-surface-container-high rounded-lg border-l-4 border-primary-container shadow-xl">
-                <span id="question-category-tag" class="inline-block px-3 py-1 bg-burgundy-deep text-primary text-label-caps font-label-caps rounded mb-4">
-                    PHẦN I: BỐI CẢNH TRƯỚC ĐỔI MỚI
-                </span>
-                <h2 id="quiz-question-title" class="text-headline-lg-mobile md:text-headline-lg font-headline-lg-mobile md:font-headline-lg text-on-surface">
-                    Ý nghĩa lịch sử lớn nhất của <span class="text-secondary">Đại hội đại biểu toàn quốc lần thứ VI</span> (1986) là gì?
-                </h2>
+                <span id="question-category-tag" class="inline-block px-3 py-1 bg-burgundy-deep text-primary text-label-caps font-label-caps rounded mb-4"></span>
+                <h2 id="quiz-question-title" class="text-headline-lg-mobile md:text-headline-lg font-headline-lg-mobile md:font-headline-lg text-on-surface"></h2>
             </div>
 
             <!-- Answers Grid (4 Cards A, B, C, D) -->
@@ -274,15 +275,17 @@
                 <!-- Option cards will be dynamically rendered here -->
             </div>
 
-            <!-- Explanation & Next Question Card (Shown after selection) -->
-            <div id="quiz-explanation-card" class="hidden bg-surface-container border-2 p-6 rounded-lg shadow-lg text-body-md font-body-md space-y-3">
-                <div id="exp-status-title" class="font-headline-md text-headline-md flex items-center gap-2"></div>
-                <div id="exp-body-text" class="text-on-surface/90 leading-relaxed"></div>
-                <div id="exp-citation-text" class="text-label-caps font-label-caps text-secondary italic border-t border-outline/20 pt-2"></div>
-                
-                <div class="flex justify-end pt-2">
-                    <button onclick="nextQuestion()" class="bg-secondary text-on-secondary font-headline-md font-bold px-8 py-3 rounded-lg shadow-[4px_4px_0_0_rgba(88,12,16,1)] hover:bg-gold-warm transition flex items-center gap-2 cursor-pointer">
-                        <span>CÂU TIẾP THEO</span>
+            <!-- Small explanation note (Shown after selection) -->
+            <div id="quiz-explanation-card" class="hidden bg-surface-container border-l-4 p-4 rounded-lg shadow-md">
+                <div class="flex items-start gap-3">
+                    <span id="exp-icon" class="material-symbols-outlined text-2xl flex-shrink-0"></span>
+                    <div class="flex-grow space-y-1 min-w-0">
+                        <p id="exp-status-title" class="font-bold text-sm uppercase tracking-wide"></p>
+                        <p id="exp-body-text" class="text-sm text-on-surface/90 leading-relaxed"></p>
+                        <p id="exp-citation-text" class="text-xs text-secondary italic"></p>
+                    </div>
+                    <button onclick="nextQuestion()" class="flex-shrink-0 self-center bg-secondary text-on-secondary font-bold text-sm px-5 py-2 rounded-lg shadow-[3px_3px_0_0_rgba(88,12,16,1)] hover:bg-gold-warm transition flex items-center gap-1 cursor-pointer">
+                        <span>Tiếp</span>
                         <span class="material-symbols-outlined">arrow_forward</span>
                     </button>
                 </div>
@@ -518,212 +521,219 @@
     const quizData = [
         {
             category: "PHẦN I: BỐI CẢNH TRƯỚC ĐỔI MỚI",
-            question: "Lạm phát đỉnh điểm của Việt Nam vào năm <span class=\"text-secondary\">1986</span> đạt mức bao nhiêu %?",
+            question: "Theo giáo trình, lạm phát của Việt Nam năm <span class=\"text-secondary\">1986</span> đạt mức khoảng bao nhiêu %?",
             options: [
-                { letter: "A", text: "300%", icon: "trending_down" },
-                { letter: "B", text: "774.7%", icon: "show_chart" },
-                { letter: "C", text: "393.3%", icon: "percent" },
-                { letter: "D", text: "67.4%", icon: "bar_chart" }
+                { letter: "A", text: "Khoảng 300%", icon: "trending_down" },
+                { letter: "B", text: "Khoảng 393,3%", icon: "percent" },
+                { letter: "C", text: "Khoảng 774%", icon: "show_chart" },
+                { letter: "D", text: "Khoảng 67,4%", icon: "bar_chart" }
             ],
-            answer: 1,
-            explanation: "Theo giáo trình VNR202 (tr. 128), lạm phát từ khoảng 300% năm 1985 đã tăng phi mã lên mức 774,7% vào năm 1986, làm giá trị đồng tiền giảm nhanh và đời sống vô cùng khó khăn.",
+            answer: 2,
+            explanation: "Lạm phát từ khoảng 300% năm 1985 tăng vọt lên khoảng 774% (774,7%) năm 1986 — chỉ báo trực quan nhất thể hiện mức độ nghiêm trọng của cuộc khủng hoảng kinh tế – xã hội.",
             citation: "Nguồn: Giáo trình VNR202, PDF tr. 128."
         },
         {
-            category: "PHẦN II: ĐẠI HỘI VI (12/1986)",
-            question: "Ý nghĩa lịch sử lớn nhất của <span class=\"text-secondary\">Đại hội đại biểu toàn quốc lần thứ VI</span> (1986) là gì?",
+            category: "PHẦN I: BỐI CẢNH TRƯỚC ĐỔI MỚI",
+            question: "Trong các nguyên nhân của khủng hoảng trước Đại hội VI, giáo trình nhấn mạnh nguyên nhân <span class=\"text-secondary\">chủ quan</span> quan trọng nhất là gì?",
             options: [
-                { letter: "A", text: "Duy trì cơ chế tập trung bao cấp", icon: "factory" },
-                { letter: "B", text: "Khai sinh & khởi xướng đường lối Đổi mới toàn diện", icon: "sunny" },
-                { letter: "C", text: "Chấm dứt hoàn toàn nền kinh tế thị trường", icon: "block" },
-                { letter: "D", text: "Chỉ tập trung phát triển công nghiệp nặng", icon: "settings" }
+                { letter: "A", text: "Chiến tranh bảo vệ biên giới Tây Nam và phía Bắc", icon: "shield" },
+                { letter: "B", text: "Bị bao vây, cấm vận trong nhiều năm", icon: "block" },
+                { letter: "C", text: "Nguồn viện trợ nước ngoài giảm mạnh", icon: "trending_down" },
+                { letter: "D", text: "Duy trì quá lâu cơ chế tập trung, quan liêu, bao cấp", icon: "lock" }
             ],
-            answer: 1,
-            explanation: "Đại hội VI (15–18/12/1986) là bước ngoặt khởi xướng đường lối Đổi mới toàn diện với phương châm 'Nhìn thẳng vào sự thật, đánh giá đúng sự thật, nói rõ sự thật'.",
-            citation: "Nguồn: Giáo trình VNR202, PDF tr. 129."
+            answer: 3,
+            explanation: "Về khách quan: xuất phát điểm thấp, hậu quả chiến tranh, chiến tranh biên giới, cấm vận, viện trợ giảm. Nhưng giáo trình nhấn mạnh nguyên nhân chủ quan: sai lầm trong đánh giá tình hình, nóng vội cải tạo XHCN và đặc biệt là duy trì quá lâu cơ chế tập trung, quan liêu, bao cấp.",
+            citation: "Nguồn: Giáo trình VNR202, PDF tr. 128."
         },
         {
-            category: "PHẦN II: ĐẠI HỘI VI (12/1986)",
-            question: "Ba chương trình kinh tế lớn được <span class=\"text-secondary\">Đại hội VI (1986)</span> xác định tập trung nguồn lực là gì?",
+            category: "PHẦN I: BỐI CẢNH TRƯỚC ĐỔI MỚI",
+            question: "Quá trình hình thành tư duy Đổi mới được ghi nhận qua ba mốc khảo nghiệm thực tiễn: tháng 8/1979, tháng 6/1985 và <span class=\"text-secondary\">tháng nào</span>?",
             options: [
-                { letter: "A", text: "Công nghiệp nặng, Điện lực, Nông nghiệp", icon: "precision_manufacturing" },
-                { letter: "B", text: "Lương thực – thực phẩm, Hàng tiêu dùng, Hàng xuất khẩu", icon: "rice_bowl" },
-                { letter: "C", text: "Giao thông, Giáo dục, Y tế", icon: "local_shipping" },
-                { letter: "D", text: "Dầu khí, Thủy điện, Kháng chiến", icon: "oil_barrel" }
-            ],
-            answer: 1,
-            explanation: "Đại hội VI ưu tiên tập trung nguồn lực giải quyết các nhu cầu cấp thiết qua 3 chương trình trọng điểm: Lương thực – thực phẩm, Hàng tiêu dùng, Hàng xuất khẩu.",
-            citation: "Nguồn: Giáo trình VNR202, PDF tr. 129."
-        },
-        {
-            category: "PHẦN III: CHÍNH SÁCH 1987–1990",
-            question: "Chính sách <span class=\"text-secondary\">\"4 giảm\"</span> tại Hội nghị Trung ương 2 khóa VI (04/1987) nhằm mục tiêu gì?",
-            options: [
-                { letter: "A", text: "Giảm bội chi ngân sách, giảm tăng giá, giảm lạm phát, giảm khó khăn đời sống", icon: "savings" },
-                { letter: "B", text: "Giảm thuế, giảm nhập khẩu, giảm chi tiêu quốc phòng, giảm dân số", icon: "gavel" },
-                { letter: "C", text: "Giảm giá điện, giảm giá xăng, giảm giờ làm, giảm biên chế", icon: "bolt" },
-                { letter: "D", text: "Giảm sản xuất nông nghiệp, giảm tiêu dùng, giảm xuất khẩu", icon: "no_food" }
+                { letter: "A", text: "Tháng 8/1986", icon: "event" },
+                { letter: "B", text: "Tháng 12/1986", icon: "calendar_month" },
+                { letter: "C", text: "Tháng 4/1987", icon: "today" },
+                { letter: "D", text: "Tháng 3/1989", icon: "date_range" }
             ],
             answer: 0,
-            explanation: "HNTW 2 khóa VI đưa ra chính sách '4 giảm' giải quyết cấp bách rối ren phân phối lưu thông để tháo gỡ khó khăn cho nhân dân.",
+            explanation: "Ba mốc thường được nhắc tới là 8/1979, 6/1985 và 8/1986. Kết luận Bộ Chính trị tháng 8/1986 về cơ cấu sản xuất, kinh tế nhiều thành phần và đổi mới cơ chế quản lý là bước chuẩn bị trực tiếp cho đường lối Đổi mới tại Đại hội VI.",
+            citation: "Nguồn: Giáo trình VNR202, PDF tr. 128–129."
+        },
+        {
+            category: "PHẦN II: ĐẠI HỘI VI (12/1986)",
+            question: "<span class=\"text-secondary\">Đại hội đại biểu toàn quốc lần thứ VI</span> của Đảng diễn ra tại đâu và trong thời gian nào?",
+            options: [
+                { letter: "A", text: "24–27/6/1991 tại Hà Nội", icon: "event_busy" },
+                { letter: "B", text: "15–18/12/1986 tại Hà Nội", icon: "event_available" },
+                { letter: "C", text: "28/6–1/7/1996 tại Hà Nội", icon: "event" },
+                { letter: "D", text: "15–18/12/1986 tại Thành phố Hồ Chí Minh", icon: "location_city" }
+            ],
+            answer: 1,
+            explanation: "Đại hội VI diễn ra tại Hà Nội từ 15 đến 18/12/1986, đúng lúc đất nước khủng hoảng KT–XH nặng nề, lương thực – hàng tiêu dùng khan hiếm, lạm phát rất cao và còn bị bao vây, cấm vận.",
+            citation: "Nguồn: Giáo trình VNR202, PDF tr. 129."
+        },
+        {
+            category: "PHẦN II: ĐẠI HỘI VI (12/1986)",
+            question: "Ba chương trình kinh tế lớn mà <span class=\"text-secondary\">Đại hội VI</span> yêu cầu tập trung nguồn lực là gì?",
+            options: [
+                { letter: "A", text: "Công nghiệp nặng – Điện lực – Nông nghiệp", icon: "precision_manufacturing" },
+                { letter: "B", text: "Giao thông – Giáo dục – Y tế", icon: "local_shipping" },
+                { letter: "C", text: "Lương thực – thực phẩm, Hàng tiêu dùng, Hàng xuất khẩu", icon: "rice_bowl" },
+                { letter: "D", text: "Dầu khí – Thủy điện – Hàng xuất khẩu", icon: "oil_barrel" }
+            ],
+            answer: 2,
+            explanation: "Trước Đổi mới, khó khăn lớn nhất là thiếu lương thực, thiếu hàng tiêu dùng và thiếu nguồn ngoại tệ. Thay vì dàn trải nguồn lực, Đại hội VI yêu cầu tập trung giải quyết những nhu cầu thiết yếu nhất qua 3 chương trình: lương thực – thực phẩm, hàng tiêu dùng, hàng xuất khẩu.",
+            citation: "Nguồn: Giáo trình VNR202, PDF tr. 129."
+        },
+        {
+            category: "PHẦN II: ĐẠI HỘI VI (12/1986)",
+            question: "Giáo trình chỉ rõ một <span class=\"text-secondary\">hạn chế</span> của Đại hội VI là gì?",
+            options: [
+                { letter: "A", text: "Chưa tìm ra giải pháp thật hiệu quả để tháo gỡ ngay tình trạng rối ren trong phân phối và lưu thông", icon: "report_problem" },
+                { letter: "B", text: "Chưa thừa nhận sự tồn tại của nền kinh tế nhiều thành phần", icon: "block" },
+                { letter: "C", text: "Chưa đặt vấn đề xóa bỏ cơ chế tập trung, bao cấp", icon: "money_off" },
+                { letter: "D", text: "Chưa quan tâm tới chính sách xã hội", icon: "diversity_3" }
+            ],
+            answer: 0,
+            explanation: "Đại hội VI là Đại hội khởi xướng đường lối đổi mới toàn diện, nhưng giáo trình chỉ rõ hạn chế: chưa tìm ra giải pháp thật hiệu quả để tháo gỡ ngay tình trạng rối ren trong phân phối và lưu thông, nên giai đoạn 1987–1990 phải tiếp tục đưa ra các chính sách cụ thể hơn.",
+            citation: "Nguồn: Giáo trình VNR202, PDF tr. 130."
+        },
+        {
+            category: "PHẦN III: CHÍNH SÁCH 1987–1990",
+            question: "Chính sách <span class=\"text-secondary\">\"bốn giảm\"</span> tại Hội nghị Trung ương 2 khóa VI (4/1987) gồm những nội dung nào?",
+            options: [
+                { letter: "A", text: "Giảm thuế – giảm giá – giảm lương – giảm chi tiêu", icon: "savings" },
+                { letter: "B", text: "Giảm bội chi ngân sách – giảm nhịp độ tăng giá – giảm lạm phát – giảm khó khăn về đời sống nhân dân", icon: "trending_down" },
+                { letter: "C", text: "Giảm nhập khẩu – giảm xuất khẩu – giảm đầu tư – giảm tiêu dùng", icon: "swap_vert" },
+                { letter: "D", text: "Giảm giá điện – giảm giá xăng – giảm giờ làm – giảm biên chế", icon: "bolt" }
+            ],
+            answer: 1,
+            explanation: "HNTW 2 (4/1987) tập trung xử lý vấn đề cấp bách của phân phối và lưu thông với chính sách 'bốn giảm'; đồng thời giải thể các trạm kiểm soát hàng hóa, thực hiện cơ chế một giá, chế độ lương thống nhất, chuyển đơn vị quốc doanh sang hạch toán kinh doanh.",
             citation: "Nguồn: Giáo trình VNR202, PDF tr. 131."
         },
         {
             category: "PHẦN III: CHÍNH SÁCH 1987–1990",
-            question: "<span class=\"text-secondary\">Quyết định 217-HĐBT</span> ngày 14/11/1987 tạo ra đột phá thể chế nào cho Doanh nghiệp Nhà nước?",
+            question: "<span class=\"text-secondary\">Quyết định 217-HĐBT</span> ngày 14/11/1987 có nội dung cốt lõi là gì?",
             options: [
-                { letter: "A", text: "Giải thể toàn bộ các Doanh nghiệp Nhà nước", icon: "domain_disabled" },
-                { letter: "B", text: "Trao quyền tự chủ sản xuất kinh doanh, chuyển sang hạch toán kinh doanh", icon: "store" },
-                { letter: "C", text: "Tăng gấp đôi vốn ngân sách cấp phát bao cấp", icon: "payments" },
-                { letter: "D", text: "Siết chặt chỉ tiêu pháp lệnh hành chính", icon: "assignment" }
+                { letter: "A", text: "Giải thể các trạm kiểm soát hàng hóa trên các tuyến giao thông", icon: "road" },
+                { letter: "B", text: "Thực hiện cơ chế một giá trong lưu thông hàng hóa", icon: "price_change" },
+                { letter: "C", text: "Trao quyền tự chủ cho doanh nghiệp quốc doanh, chuyển sang hạch toán kinh doanh", icon: "store" },
+                { letter: "D", text: "Khoán sản phẩm cuối cùng đến nhóm hộ và hộ xã viên", icon: "agriculture" }
             ],
-            answer: 1,
-            explanation: "Quyết định 217-HĐBT trao quyền tự chủ cho các DNNN, chuyển từ chế độ bao cấp sang hạch toán kinh doanh tự chịu trách nhiệm.",
+            answer: 2,
+            explanation: "QĐ 217-HĐBT trao quyền tự chủ cho các doanh nghiệp quốc doanh: cơ chế quản lý thay đổi theo hướng giảm bao cấp, doanh nghiệp có nhiều trách nhiệm và chủ động hơn trong sản xuất, kinh doanh theo hạch toán.",
             citation: "Nguồn: Giáo trình VNR202, PDF tr. 131."
         },
         {
             category: "PHẦN III: CHÍNH SÁCH 1987–1990",
-            question: "Nghị quyết 10 của Bộ Chính trị (<span class=\"text-secondary\">Khoán 10</span> - 04/1988) có nội dung cốt lõi nào?",
+            question: "Theo <span class=\"text-secondary\">Khoán 10</span> (Nghị quyết 10 của Bộ Chính trị, 4/1988), người nông dân được canh tác trên diện tích ổn định trong bao nhiêu năm và bảo đảm thu nhập từ bao nhiêu trở lên?",
             options: [
-                { letter: "A", text: "Quốc hữu hóa toàn bộ ruộng đất nông nghiệp", icon: "landscape" },
-                { letter: "B", text: "Khoán sản phẩm đến hộ gia đình, giao đất canh tác ổn định 15 năm", icon: "agriculture" },
-                { letter: "C", text: "Tăng thuế sản xuất nông nghiệp", icon: "request_quote" },
-                { letter: "D", text: "Thành lập các tập đoàn nông nghiệp nhà nước lớn", icon: "corporate_fare" }
+                { letter: "A", text: "10 năm – từ 30% sản lượng khoán", icon: "schedule" },
+                { letter: "B", text: "15 năm – từ 40% sản lượng khoán trở lên", icon: "agriculture" },
+                { letter: "C", text: "20 năm – từ 50% sản lượng khoán", icon: "landscape" },
+                { letter: "D", text: "25 năm – từ 60% sản lượng khoán", icon: "workspace_premium" }
             ],
             answer: 1,
-            explanation: "Khoán 10 (04/1988) giao khoán sản phẩm đến hộ nông dân, cho phép sử dụng đất ổn định 15 năm và hưởng ≥40% sản lượng khoán.",
+            explanation: "Khoán 10: khoán sản phẩm cuối cùng đến nhóm hộ và hộ xã viên; người nông dân được nhận khoán, canh tác trên diện tích ổn định trong 15 năm, bảo đảm thu nhập từ 40% sản lượng khoán trở lên — tăng quyền chủ động và động lực sản xuất.",
             citation: "Nguồn: Giáo trình VNR202, PDF tr. 131."
         },
         {
             category: "PHẦN III: CHÍNH SÁCH 1987–1990",
-            question: "Chế độ phân phối bao cấp bằng <span class=\"text-secondary\">Tem Phiếu</span> được xóa bỏ hoàn toàn khi nào?",
+            question: "Chế độ phân phối theo <span class=\"text-secondary\">tem phiếu</span> — biểu hiện điển hình của cơ chế phân phối bao cấp — được xóa bỏ vào thời điểm nào?",
             options: [
-                { letter: "A", text: "Tháng 12/1986", icon: "event" },
-                { letter: "B", text: "Cuối năm 1988", icon: "confirmation_number" },
-                { letter: "C", text: "Tháng 6/1991", icon: "today" },
-                { letter: "D", text: "Tháng 7/1995", icon: "calendar_month" }
+                { letter: "A", text: "Cuối năm 1986", icon: "event" },
+                { letter: "B", text: "Cuối năm 1987", icon: "event_repeat" },
+                { letter: "C", text: "Cuối năm 1989", icon: "today" },
+                { letter: "D", text: "Cuối năm 1988", icon: "confirmation_number" }
             ],
-            answer: 1,
-            explanation: "Cuối năm 1988, Việt Nam chính thức xóa bỏ hoàn toàn tem phiếu, chuyển sang cơ chế 1 giá và lưu thông hàng hóa tự do.",
+            answer: 3,
+            explanation: "Cuối năm 1988 tem phiếu được xóa bỏ. Sau đó hàng tiêu dùng đa dạng hơn, lưu thông tương đối thuận lợi — nền kinh tế chuyển dần từ phân phối hành chính sang lưu thông hàng hóa theo cơ chế mới.",
             citation: "Nguồn: Giáo trình VNR202, PDF tr. 132."
         },
         {
             category: "PHẦN IV: KẾT QUẢ BƯỚC ĐẦU",
-            question: "Kỳ tích về <span class=\"text-secondary\">Lương thực năm 1989</span> sau khi Đổi mới so với 1988 là gì?",
+            question: "Chuyển biến về <span class=\"text-secondary\">lương thực</span> từ năm 1988 sang năm 1989 được giáo trình ghi nhận như thế nào?",
             options: [
-                { letter: "A", text: "Từ nhập 45 vạn tấn gạo (1988) vươn lên tự túc, dự trữ & xuất khẩu 1.4 triệu tấn gạo", icon: "eco" },
-                { letter: "B", text: "Liên tục thiếu gạo và phải nhập khẩu từ 1986 đến 1995", icon: "warning" },
-                { letter: "C", text: "Ngừng trồng lúa chuyển hoàn toàn sang thủy sản", icon: "phishing" },
-                { letter: "D", text: "Nhập khẩu gạo tăng gấp 3 lần", icon: "arrow_upward" }
+                { letter: "A", text: "1988 còn nhập hơn 45 vạn tấn gạo; đến 1989 đáp ứng được nhu cầu, có dự trữ và xuất khẩu", icon: "eco" },
+                { letter: "B", text: "1988 đã xuất khẩu gạo; 1989 xuất khẩu gấp đôi", icon: "rocket_launch" },
+                { letter: "C", text: "Cả 1988 và 1989 đều phải nhập hơn 45 vạn tấn gạo", icon: "warning" },
+                { letter: "D", text: "1988 thiếu gạo nghiêm trọng; 1989 mới đủ ăn, chưa có dự trữ", icon: "rice_bowl" }
             ],
             answer: 0,
-            explanation: "Năm 1988 còn nhập 45 vạn tấn gạo, nhưng đến 1989 nhờ Khoán 10 Việt Nam đã tự túc, có dự trữ và vươn lên xuất khẩu 1.4 triệu tấn gạo.",
+            explanation: "Giáo trình ghi nhận năm 1988 Việt Nam vẫn phải nhập hơn 45 vạn tấn gạo; đến năm 1989 đã đáp ứng được nhu cầu, có dự trữ và xuất khẩu — một trong những chuyển biến dễ thấy nhất sau đổi mới nông nghiệp.",
             citation: "Nguồn: Giáo trình VNR202, PDF tr. 132."
         },
         {
-            category: "PHẦN III: CHÍNH SÁCH 1987–1990",
-            question: "<span class=\"text-secondary\">Luật Đầu tư nước ngoài</span> tại Việt Nam chính thức có hiệu lực từ mốc thời gian nào?",
-            options: [
-                { letter: "A", text: "01/01/1988", icon: "handshake" },
-                { letter: "B", text: "30/04/1975", icon: "flag" },
-                { letter: "C", text: "15/12/1986", icon: "history" },
-                { letter: "D", text: "28/07/1995", icon: "public" }
-            ],
-            answer: 0,
-            explanation: "Luật Đầu tư nước ngoài được Quốc hội khóa VIII thông qua và có hiệu lực từ ngày 01/01/1988, mở ra hành lang thu hút vốn FDI.",
-            citation: "Nguồn: Giáo trình VNR202, PDF tr. 131."
-        },
-        {
-            category: "PHẦN III: CHÍNH SÁCH 1987–1990",
-            question: "Hội nghị Trung ương 6 khóa VI (03/1989) chính thức đưa ra khái niệm quan trọng nào?",
-            options: [
-                { letter: "A", text: "Kinh tế tri thức", icon: "psychology" },
-                { letter: "B", text: "Hệ thống chính trị và 6 nguyên tắc chỉ đạo Đổi mới", icon: "policy" },
-                { letter: "C", text: "Kinh tế số", icon: "computer" },
-                { letter: "D", text: "Kinh tế xanh", icon: "forest" }
-            ],
-            answer: 1,
-            explanation: "HNTW 6 (03/1989) chính thức dùng khái niệm 'Hệ thống chính trị' và đề ra 6 nguyên tắc chỉ đạo công cuộc Đổi mới.",
-            citation: "Nguồn: Giáo trình VNR202, PDF tr. 133."
-        },
-        {
             category: "PHẦN V: ĐẠI HỘI VII (06/1991)",
-            question: "<span class=\"text-secondary\">Đại hội VII (1991)</span> đã thông qua hai văn kiện lịch sử mang tính định hướng dài hạn nào?",
+            question: "<span class=\"text-secondary\">Đại hội VII</span> (6/1991) có điểm mới đặc biệt là thông qua hai văn kiện nào?",
             options: [
                 { letter: "A", text: "Hiến pháp 1992 và Luật Đất đai 1993", icon: "menu_book" },
-                { letter: "B", text: "Cương lĩnh 1991 và Chiến lược phát triển KT-XH đến năm 2000", icon: "history_edu" },
-                { letter: "C", text: "Luật Doanh nghiệp và Luật Đầu tư 1990", icon: "gavel" },
-                { letter: "D", text: "Kế hoạch 5 năm 1986-1990", icon: "date_range" }
+                { letter: "B", text: "Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên CNXH (1991) và Chiến lược ổn định và phát triển KT-XH đến năm 2000", icon: "history_edu" },
+                { letter: "C", text: "Luật Doanh nghiệp 1990 và Luật Đầu tư nước ngoài", icon: "gavel" },
+                { letter: "D", text: "Kế hoạch 5 năm 1986–1990 và Cương lĩnh 1991", icon: "date_range" }
             ],
             answer: 1,
-            explanation: "Đại hội VII (06/1991) thông qua Cương lĩnh 1991 và Chiến lược phát triển KT-XH đến năm 2000.",
+            explanation: "Đại hội VII (24–27/6/1991) thông qua Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên CNXH năm 1991 và Chiến lược ổn định và phát triển kinh tế – xã hội đến năm 2000.",
             citation: "Nguồn: Giáo trình VNR202, PDF tr. 135."
         },
         {
             category: "PHẦN V: ĐẠI HỘI VII (06/1991)",
-            question: "Mục tiêu tổng quát về tăng trưởng <span class=\"text-secondary\">GDP đến năm 2000</span> tại Chiến lược (Đại hội VII) là gì?",
+            question: "Về tăng trưởng, <span class=\"text-secondary\">Chiến lược đến năm 2000</span> (Đại hội VII) đặt mục tiêu GDP năm 2000 như thế nào?",
             options: [
-                { letter: "A", text: "GDP năm 2000 tăng gấp đôi so với năm 1990", icon: "trending_up" },
-                { letter: "B", text: "GDP năm 2000 tăng gấp 10 lần năm 1990", icon: "rocket_launch" },
-                { letter: "C", text: "Đạt mức GDP 1.000 tỷ USD", icon: "attach_money" },
-                { letter: "D", text: "Giữ nguyên quy mô GDP năm 1990", icon: "horizontal_rule" }
+                { letter: "A", text: "Tăng gấp đôi GDP năm 1990", icon: "trending_up" },
+                { letter: "B", text: "Tăng gấp 5 lần GDP năm 1990", icon: "rocket_launch" },
+                { letter: "C", text: "Giữ nguyên quy mô GDP năm 1990", icon: "horizontal_rule" },
+                { letter: "D", text: "Tăng gấp 10 lần GDP năm 1990", icon: "attach_money" }
             ],
             answer: 0,
-            explanation: "Chiến lược 2000 xác định mục tiêu ổn định KT-XH, thoát nghèo và đạt GDP năm 2000 tăng gấp đôi năm 1990.",
+            explanation: "Chiến lược đặt mục tiêu đưa đất nước ra khỏi khủng hoảng, ổn định KT-XH, vượt qua tình trạng nước nghèo và kém phát triển, với GDP năm 2000 tăng gấp đôi năm 1990.",
             citation: "Nguồn: Giáo trình VNR202, PDF tr. 136."
         },
         {
             category: "PHẦN VI: THỂ CHẾ HÓA 1991–1995",
-            question: "Sự kiện pháp lý thể chế hóa đường lối Đổi mới của Đảng vào tháng 4/1992 là gì?",
+            question: "Tháng 4/1992, Quốc hội thông qua văn kiện nào, được xem là dấu mốc <span class=\"text-secondary\">thể chế hóa</span> đường lối Đổi mới sau Đại hội VII?",
             options: [
-                { letter: "A", text: "Ban hành Luật Đất đai mới", icon: "landscape" },
-                { letter: "B", text: "Quốc hội thông qua Hiến pháp năm 1992", icon: "balance" },
-                { letter: "C", text: "Ký Hiệp định thương mại tự do", icon: "contract" },
-                { letter: "D", text: "Thành lập Ngân hàng Nhà nước", icon: "account_balance" }
+                { letter: "A", text: "Cương lĩnh xây dựng đất nước 1991", icon: "history_edu" },
+                { letter: "B", text: "Luật Đầu tư nước ngoài", icon: "handshake" },
+                { letter: "C", text: "Hiến pháp năm 1992", icon: "balance" },
+                { letter: "D", text: "Quyết định 217-HĐBT", icon: "assignment" }
             ],
-            answer: 1,
-            explanation: "Tháng 4/1992, Quốc hội thông qua Hiến pháp 1992 thể chế hóa đường lối Đổi mới, bảo hộ quyền sở hữu và kinh doanh.",
-            citation: "Nguồn: Giáo trình VNR202, PDF tr. 136."
-        },
-        {
-            category: "PHẦN VI: THỂ CHẾ HÓA 1991–1995",
-            question: "Tháng 7/1995 ghi dấu hai sự kiện <span class=\"text-secondary\">Ngoại giao lịch sử</span> nào bứt phá thế cấm vận?",
-            options: [
-                { letter: "A", text: "Rút quân khỏi Campuchia và Bỏ tem phiếu", icon: "undo" },
-                { letter: "B", text: "Gia nhập ASEAN (28/07) và Bình thường hóa quan hệ với Hoa Kỳ (11/07)", icon: "public" },
-                { letter: "C", text: "Gia nhập WTO và APEC", icon: "groups" },
-                { letter: "D", text: "Ký Hiệp định Genève và Hiệp định Paris", icon: "draw" }
-            ],
-            answer: 1,
-            explanation: "Tháng 7/1995 đánh dấu 2 sự kiện lịch sử: Bình thường hóa quan hệ Việt - Mỹ (11/7) và Gia nhập ASEAN (28/7).",
+            answer: 2,
+            explanation: "Tháng 4/1992, Quốc hội thông qua Hiến pháp năm 1992 — dấu mốc quan trọng trong quá trình tiếp tục thực hiện đường lối Đổi mới sau Đại hội VII.",
             citation: "Nguồn: Giáo trình VNR202, PDF tr. 137."
         },
         {
             category: "PHẦN VI: THỂ CHẾ HÓA 1991–1995",
-            question: "<span class=\"text-secondary\">Đại hội VIII (06/1996)</span> đã đưa ra đánh giá tổng kết lịch sử nào sau 10 năm Đổi mới?",
+            question: "<span class=\"text-secondary\">Đại hội VIII</span> (28/6–1/7/1996) đưa ra nhận định lịch sử nào sau 10 năm Đổi mới?",
             options: [
-                { letter: "A", text: "Đất nước chính thức ra khỏi cuộc khủng hoảng kinh tế – xã hội kéo dài 20 năm", icon: "verified" },
-                { letter: "B", text: "Đất nước vẫn chìm trong khủng hoảng nghiêm trọng", icon: "report_problem" },
-                { letter: "C", text: "Hoàn thành 100% mục tiêu nước công nghiệp phát triển", icon: "star" },
-                { letter: "D", text: "Bỏ hoàn toàn mục tiêu định hướng XHCN", icon: "cancel" }
+                { letter: "A", text: "Đất nước đã trở thành nước công nghiệp phát triển", icon: "star" },
+                { letter: "B", text: "Mọi vấn đề kinh tế – xã hội đã được giải quyết hoàn toàn", icon: "verified" },
+                { letter: "C", text: "Đất nước vẫn chìm trong khủng hoảng như trước Đổi mới", icon: "report_problem" },
+                { letter: "D", text: "\"Nước ta đã ra khỏi khủng hoảng kinh tế – xã hội, nhưng một số mặt còn chưa vững chắc\"", icon: "flag" }
             ],
-            answer: 0,
-            explanation: "Đại hội VIII (1996) tuyên bố nước ta đã ra khỏi khủng hoảng kinh tế - xã hội kéo dài 20 năm, mở đường CNH - HĐH!",
-            citation: "Nguồn: Giáo trình VNR202, PDF tr. 137."
+            answer: 3,
+            explanation: "Đại hội VIII kết luận: 'Nước ta đã ra khỏi khủng hoảng kinh tế – xã hội, nhưng một số mặt còn chưa vững chắc'. Nhiệm vụ chặng đầu chuẩn bị tiền đề CNH cơ bản hoàn thành, cho phép chuyển sang đẩy mạnh công nghiệp hóa, hiện đại hóa.",
+            citation: "Nguồn: Giáo trình VNR202, PDF tr. 141–142."
         }
     ];
 
     let currentQIdx = 0;
     let score = 0;
     let answered = false;
-    let timerInterval = null;
-    let timeLeft = 15; // 15s per question
+    let isPaused = false;
+
+    // Smooth rAF-based timer
+    const QUESTION_TIME_MS = 15000;
+    let timerRafId = null;
+    let remainingMs = QUESTION_TIME_MS;
+    let deadlineMs = 0;
+    let lastShownSec = -1;
 
     // -------------------------------------------------------------------
     // ENGINE & NAVIGATION
     // -------------------------------------------------------------------
     function showHomeView() {
-        clearInterval(timerInterval);
+        cancelTimerLoop();
+        resetPauseState();
         document.getElementById('home-view').classList.remove('hidden');
         document.getElementById('quiz-view').classList.add('hidden');
         document.getElementById('extra-sections').classList.remove('hidden');
@@ -747,7 +757,9 @@
 
     function renderCurrentQuestion() {
         answered = false;
-        clearInterval(timerInterval);
+        cancelTimerLoop();
+        resetPauseState();
+        setPauseButtonDisabled(false);
         
         const q = quizData[currentQIdx];
         const numStr = (currentQIdx + 1 < 10 ? '0' : '') + (currentQIdx + 1);
@@ -773,10 +785,7 @@
                 <div class="flex-shrink-0 w-12 h-12 rounded-full bg-surface-variant flex items-center justify-center group-hover:bg-secondary-container transition-colors" id="opt-badge-${idx}">
                     <span class="text-stat-value font-stat-value text-primary group-hover:text-charcoal" id="opt-letter-${idx}">${opt.letter}</span>
                 </div>
-                <div class="flex flex-col gap-2 flex-grow">
-                    <span class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-secondary transition-colors" data-icon="${opt.icon}" style="font-variation-settings: 'FILL' 1;">${opt.icon}</span>
-                    <p class="text-body-lg font-body-lg text-on-surface" id="opt-text-${idx}">${opt.text}</p>
-                </div>
+                <p class="text-body-lg font-body-lg text-on-surface flex-grow" id="opt-text-${idx}">${opt.text}</p>
             `;
             grid.appendChild(btn);
         });
@@ -786,28 +795,84 @@
     }
 
     function startQuestionTimer() {
-        timeLeft = 15;
-        updateTimerDisplay();
+        remainingMs = QUESTION_TIME_MS;
+        startTimerLoop();
+    }
 
-        timerInterval = setInterval(() => {
-            timeLeft--;
+    function startTimerLoop() {
+        cancelTimerLoop();
+        deadlineMs = performance.now() + remainingMs;
+        lastShownSec = -1;
+
+        const tick = () => {
+            remainingMs = Math.max(0, deadlineMs - performance.now());
             updateTimerDisplay();
 
-            if (timeLeft <= 0) {
-                clearInterval(timerInterval);
-                if (!answered) {
-                    handleTimeOut();
-                }
+            if (remainingMs <= 0) {
+                timerRafId = null;
+                if (!answered) handleTimeOut();
+                return;
             }
-        }, 1000);
+            timerRafId = requestAnimationFrame(tick);
+        };
+        timerRafId = requestAnimationFrame(tick);
+    }
+
+    function cancelTimerLoop() {
+        if (timerRafId !== null) {
+            cancelAnimationFrame(timerRafId);
+            timerRafId = null;
+        }
+    }
+
+    function pauseTimerLoop() {
+        if (timerRafId !== null) {
+            cancelTimerLoop();
+            remainingMs = Math.max(0, deadlineMs - performance.now());
+            updateTimerDisplay();
+        }
+    }
+
+    // -------------------------------------------------------------------
+    // PAUSE / RESUME
+    // -------------------------------------------------------------------
+    function togglePause() {
+        const quizHidden = document.getElementById('quiz-view').classList.contains('hidden');
+        if (quizHidden || answered) return;
+
+        isPaused = !isPaused;
+
+        if (isPaused) {
+            pauseTimerLoop();
+        } else {
+            startTimerLoop(); // resume with remaining time
+        }
+        setPauseIcon(isPaused);
+    }
+
+    function setPauseIcon(paused) {
+        document.getElementById('pause-icon').innerText = paused ? 'play_circle' : 'pause_circle';
+    }
+
+    function resetPauseState() {
+        isPaused = false;
+        setPauseIcon(false);
+    }
+
+    function setPauseButtonDisabled(disabled) {
+        document.getElementById('btn-pause-quiz').disabled = disabled;
     }
 
     function updateTimerDisplay() {
-        const timeStr = `00:${timeLeft < 10 ? '0' : ''}${timeLeft}`;
-        document.getElementById('header-timer-text').innerText = timeStr;
-        document.getElementById('quiz-timer-val').innerText = timeStr;
+        const totalSec = Math.ceil(remainingMs / 1000);
+        if (totalSec !== lastShownSec) {
+            lastShownSec = totalSec;
+            const timeStr = `00:${totalSec < 10 ? '0' : ''}${totalSec}`;
+            document.getElementById('header-timer-text').innerText = timeStr;
+            document.getElementById('quiz-timer-val').innerText = timeStr;
+        }
 
-        const percent = (timeLeft / 15) * 100;
+        const percent = (remainingMs / QUESTION_TIME_MS) * 100;
         document.getElementById('quiz-timer-bar').style.width = `${percent}%`;
         document.getElementById('quiz-timer-bg').style.width = `${100 - percent}%`;
     }
@@ -815,7 +880,8 @@
     function handleSelectOption(selectedIdx) {
         if (answered) return;
         answered = true;
-        clearInterval(timerInterval);
+        cancelTimerLoop();
+        setPauseButtonDisabled(true);
 
         const q = quizData[currentQIdx];
         const isCorrect = (selectedIdx === q.answer);
@@ -850,6 +916,7 @@
 
     function handleTimeOut() {
         answered = true;
+        setPauseButtonDisabled(true);
         const q = quizData[currentQIdx];
 
         q.options.forEach((opt, idx) => {
@@ -868,6 +935,7 @@
     function showExplanation(isCorrect, isTimeout = false) {
         const q = quizData[currentQIdx];
         const expCard = document.getElementById('quiz-explanation-card');
+        const expIcon = document.getElementById('exp-icon');
         const expTitle = document.getElementById('exp-status-title');
         const expBody = document.getElementById('exp-body-text');
         const expCite = document.getElementById('exp-citation-text');
@@ -875,17 +943,23 @@
         expCard.classList.remove('hidden');
 
         if (isCorrect) {
-            expCard.className = 'bg-surface-container border-2 border-success-green p-6 rounded-lg shadow-lg text-body-md font-body-md space-y-3';
-            expTitle.className = 'font-headline-md text-headline-md flex items-center gap-2 text-success-green';
-            expTitle.innerHTML = '<span class="material-symbols-outlined text-3xl">check_circle</span> CHÍNH XÁC! (+100 Điểm)';
+            expCard.className = 'bg-surface-container border-l-4 border-success-green p-4 rounded-lg shadow-md';
+            expIcon.className = 'material-symbols-outlined text-2xl flex-shrink-0 text-success-green';
+            expIcon.innerText = 'check_circle';
+            expTitle.className = 'font-bold text-sm uppercase tracking-wide text-success-green';
+            expTitle.innerText = 'Chính xác!';
         } else if (isTimeout) {
-            expCard.className = 'bg-surface-container border-2 border-warning-orange p-6 rounded-lg shadow-lg text-body-md font-body-md space-y-3';
-            expTitle.className = 'font-headline-md text-headline-md flex items-center gap-2 text-warning-orange';
-            expTitle.innerHTML = '<span class="material-symbols-outlined text-3xl">timer_off</span> HẾT GIỜ RỒI!';
+            expCard.className = 'bg-surface-container border-l-4 border-warning-orange p-4 rounded-lg shadow-md';
+            expIcon.className = 'material-symbols-outlined text-2xl flex-shrink-0 text-warning-orange';
+            expIcon.innerText = 'timer_off';
+            expTitle.className = 'font-bold text-sm uppercase tracking-wide text-warning-orange';
+            expTitle.innerText = 'Hết giờ rồi!';
         } else {
-            expCard.className = 'bg-surface-container border-2 border-error-red p-6 rounded-lg shadow-lg text-body-md font-body-md space-y-3';
-            expTitle.className = 'font-headline-md text-headline-md flex items-center gap-2 text-error-red';
-            expTitle.innerHTML = '<span class="material-symbols-outlined text-3xl">cancel</span> CHƯA CHÍNH XÁC!';
+            expCard.className = 'bg-surface-container border-l-4 border-error-red p-4 rounded-lg shadow-md';
+            expIcon.className = 'material-symbols-outlined text-2xl flex-shrink-0 text-error-red';
+            expIcon.innerText = 'cancel';
+            expTitle.className = 'font-bold text-sm uppercase tracking-wide text-error-red';
+            expTitle.innerText = 'Chưa chính xác!';
         }
 
         expBody.innerText = q.explanation;
@@ -902,7 +976,8 @@
     }
 
     function finishQuizGame() {
-        clearInterval(timerInterval);
+        cancelTimerLoop();
+        resetPauseState();
         document.getElementById('answers-grid').classList.add('hidden');
         document.getElementById('quiz-explanation-card').classList.add('hidden');
         document.getElementById('quiz-final-result').classList.remove('hidden');
@@ -998,7 +1073,9 @@
             if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
             if (e.key === 'ArrowLeft') prevSlide();
             if (e.key === 'Escape') toggleSlideMode();
+            return;
         }
+        if (e.key === 'p' || e.key === 'P') togglePause();
     });
 
     function scrollToSection(id) {
