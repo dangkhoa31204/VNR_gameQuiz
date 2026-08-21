@@ -1,1086 +1,1233 @@
 <!DOCTYPE html>
 <html class="dark" lang="vi">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>The Renewal Journey - Quiz Question</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800;900&family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet"/>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800;900&family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap"
+        rel="stylesheet" />
+
     <script id="tailwind-config">
         tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                      "on-error": "#690005",
-                      "surface-container": "#1f201e",
-                      "inverse-surface": "#e4e2de",
-                      "secondary-fixed": "#ffdf9a",
-                      "burgundy-deep": "#580C10",
-                      "surface-container-high": "#2a2a28",
-                      "error": "#ffb4ab",
-                      "surface-variant": "#343533",
-                      "on-primary-fixed": "#410003",
-                      "inverse-on-surface": "#30312e",
-                      "on-tertiary": "#263143",
-                      "primary": "#ffb3ad",
-                      "surface-container-lowest": "#0e0e0d",
-                      "on-background": "#e4e2de",
-                      "tertiary-container": "#465165",
-                      "on-tertiary-fixed": "#111c2d",
-                      "error-container": "#93000a",
-                      "on-surface": "#e4e2de",
-                      "on-secondary-fixed-variant": "#5a4300",
-                      "tertiary-fixed": "#d8e3fb",
-                      "on-surface-variant": "#e2bebb",
-                      "on-primary-container": "#ffafa8",
-                      "navy-dark": "#0F172A",
-                      "tertiary": "#bcc7de",
-                      "background": "#131412",
-                      "primary-fixed": "#ffdad6",
-                      "success-green": "#16A34A",
-                      "secondary-container": "#e4ae00",
-                      "tertiary-fixed-dim": "#bcc7de",
-                      "error-red": "#DC2626",
-                      "on-primary-fixed-variant": "#920513",
-                      "outline": "#a98986",
-                      "warning-orange": "#EA580C",
-                      "primary-fixed-dim": "#ffb3ad",
-                      "outline-variant": "#5a403e",
-                      "on-tertiary-container": "#b9c4db",
-                      "primary-container": "#a0151b",
-                      "on-secondary-container": "#5b4400",
-                      "inverse-primary": "#b42627",
-                      "secondary": "#ffca45",
-                      "on-secondary-fixed": "#251a00",
-                      "surface-container-low": "#1b1c1a",
-                      "charcoal": "#111827",
-                      "on-secondary": "#3f2e00",
-                      "surface-dim": "#131412",
-                      "surface-tint": "#ffb3ad",
-                      "surface": "#131412",
-                      "secondary-fixed-dim": "#f7be1d",
-                      "gold-warm": "#CA8A04",
-                      "on-primary": "#680009",
-                      "on-error-container": "#ffdad6",
-                      "surface-container-highest": "#343533",
-                      "on-tertiary-fixed-variant": "#3c475a",
-                      "surface-bright": "#393937"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.125rem",
-                      "lg": "0.25rem",
-                      "xl": "0.5rem",
-                      "full": "0.75rem"
-              },
-              "spacing": {
-                      "container-max": "1280px",
-                      "margin-mobile": "16px",
-                      "gutter": "24px",
-                      "unit": "8px",
-                      "margin-desktop": "64px"
-              },
-              "fontFamily": {
-                      "stat-value": ["Space Grotesk", "sans-serif"],
-                      "label-caps": ["Space Grotesk", "sans-serif"],
-                      "headline-md": ["Be Vietnam Pro", "sans-serif"],
-                      "headline-lg-mobile": ["Be Vietnam Pro", "sans-serif"],
-                      "display-hero": ["Be Vietnam Pro", "sans-serif"],
-                      "body-md": ["Manrope", "sans-serif"],
-                      "body-lg": ["Manrope", "sans-serif"],
-                      "headline-lg": ["Be Vietnam Pro", "sans-serif"]
-              },
-              "fontSize": {
-                      "stat-value": ["32px", {"lineHeight": "32px", "fontWeight": "700"}],
-                      "label-caps": ["14px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
-                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
-                      "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
-                      "display-hero": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
-                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-                      "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "700"}]
-              }
-            },
-          }
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#4a100c",
+                        "surface-container": "#282425",
+                        "inverse-surface": "#e6ddd8",
+                        "secondary-fixed": "#ecdcb8",
+                        "burgundy-deep": "#44272b",
+                        "surface-container-high": "#322d2e",
+                        "error": "#e3a99f",
+                        "surface-variant": "#35302f",
+                        "on-primary-fixed": "#3d1210",
+                        "inverse-on-surface": "#332e2f",
+                        "on-tertiary": "#252b34",
+                        "primary": "#d6a79f",
+                        "surface-container-lowest": "#121011",
+                        "on-background": "#e6ddd8",
+                        "tertiary-container": "#3d4757",
+                        "on-tertiary-fixed": "#e8edf5",
+                        "error-container": "#8c322c",
+                        "on-surface": "#e6ddd8",
+                        "on-secondary-fixed-variant": "#5c4a24",
+                        "tertiary-fixed": "#e8edf5",
+                        "on-surface-variant": "#c9b8b2",
+                        "on-primary-container": "#f2c4bd",
+                        "navy-dark": "#0F172A",
+                        "tertiary": "#aab5c5",
+                        "background": "#191617",
+                        "primary-fixed": "#f0d5d0",
+                        "success-green": "#86ab80",
+                        "secondary-container": "#7d6533",
+                        "tertiary-fixed-dim": "#aab5c5",
+                        "error-red": "#c05a52",
+                        "on-primary-fixed-variant": "#7a2a26",
+                        "outline": "#8d7a74",
+                        "warning-orange": "#d08757",
+                        "primary-fixed-dim": "#d6a79f",
+                        "outline-variant": "#4a403d",
+                        "on-tertiary-container": "#c0cad9",
+                        "primary-container": "#77403c",
+                        "on-secondary-container": "#ecdcb8",
+                        "inverse-primary": "#a85652",
+                        "secondary": "#d3ad68",
+                        "on-secondary-fixed": "#2a2110",
+                        "surface-container-low": "#232021",
+                        "charcoal": "#111214",
+                        "on-secondary": "#2a2110",
+                        "surface-dim": "#191617",
+                        "surface-tint": "#d6a79f",
+                        "surface": "#1e1b1c",
+                        "secondary-fixed-dim": "#d3bd8f",
+                        "gold-warm": "#c39a55",
+                        "on-primary": "#3d1210",
+                        "on-error-container": "#f5dad5",
+                        "surface-container-highest": "#3d3738",
+                        "on-tertiary-fixed-variant": "#333c49",
+                        "surface-bright": "#453f40"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "stat-value": ["Space Grotesk", "sans-serif"],
+                        "label-caps": ["Space Grotesk", "sans-serif"],
+                        "headline-md": ["Be Vietnam Pro", "sans-serif"],
+                        "headline-lg-mobile": ["Be Vietnam Pro", "sans-serif"],
+                        "display-hero": ["Be Vietnam Pro", "sans-serif"],
+                        "body-md": ["Manrope", "sans-serif"],
+                        "body-lg": ["Manrope", "sans-serif"],
+                        "headline-lg": ["Be Vietnam Pro", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "stat-value": ["32px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "label-caps": ["14px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "display-hero": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "fontWeight": "700" }]
+                    }
+                },
+            }
         }
     </script>
     <style>
         .grid-bg {
             background-size: 40px 40px;
-            background-image: 
+            background-image:
                 linear-gradient(to right, rgba(226, 190, 187, 0.05) 1px, transparent 1px),
                 linear-gradient(to bottom, rgba(226, 190, 187, 0.05) 1px, transparent 1px);
         }
+
         .pulse-timer {
             animation: pulse-red 1s infinite;
         }
+
         @keyframes pulse-red {
-            0% { text-shadow: 0 0 5px rgba(220, 38, 38, 0.5); }
-            50% { text-shadow: 0 0 20px rgba(220, 38, 38, 0.8), 0 0 10px rgba(220, 38, 38, 0.5); }
-            100% { text-shadow: 0 0 5px rgba(220, 38, 38, 0.5); }
+            0% {
+                text-shadow: 0 0 5px rgba(220, 38, 38, 0.5);
+            }
+
+            50% {
+                text-shadow: 0 0 20px rgba(220, 38, 38, 0.8), 0 0 10px rgba(220, 38, 38, 0.5);
+            }
+
+            100% {
+                text-shadow: 0 0 5px rgba(220, 38, 38, 0.5);
+            }
         }
+
         .pulse-glow {
             animation: pulseGlow 2s infinite;
         }
+
         @keyframes pulseGlow {
-            0% { box-shadow: 0 0 0 0 rgba(255, 202, 69, 0.7); }
-            70% { box-shadow: 0 0 0 20px rgba(255, 202, 69, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(255, 202, 69, 0); }
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 202, 69, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 20px rgba(255, 202, 69, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 202, 69, 0);
+            }
         }
+
         .timeline-scroll {
             scrollbar-width: thin;
             scrollbar-color: #580C10 #1f201e;
         }
     </style>
 </head>
+
 <body class="bg-surface text-on-surface min-h-screen flex flex-col font-body-md overflow-x-hidden">
 
-<!-- TOP APP BAR HEADER -->
-<header class="bg-surface docked full-width border-b-2 border-burgundy-deep shadow-[4px_4px_0px_0px_rgba(88,12,16,1)] fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20">
-    <div class="flex items-center gap-4 cursor-pointer" onclick="showHomeView()">
-        <div class="w-10 h-10 rounded-full bg-burgundy-deep border-2 border-secondary flex items-center justify-center font-bold text-secondary text-xl">
-            ★
-        </div>
-        <h1 class="text-headline-md font-headline-md font-extrabold tracking-tight text-primary uppercase">
-            THE RENEWAL JOURNEY
-        </h1>
-    </div>
-    
-    <div class="flex items-center gap-6">
-        <div id="header-question-counter" class="hidden md:block text-label-caps font-label-caps text-on-surface-variant uppercase">
-            Q 01/15
-        </div>
-        <div class="flex items-center gap-2">
-            <span id="header-timer-text" class="text-label-caps font-label-caps text-primary uppercase">00:15</span>
-        </div>
-        <div class="flex items-center gap-4">
-            <button onclick="showHomeView()" aria-label="Home" class="text-primary hover:text-secondary transition-colors" title="Trang chủ">
-                <span class="material-symbols-outlined">home</span>
-            </button>
-            <button onclick="toggleSlideMode()" aria-label="Slide Mode" class="text-primary hover:text-secondary transition-colors" title="Chế độ Thuyết trình Slide">
-                <span class="material-symbols-outlined">slideshow</span>
-            </button>
-            <button onclick="startQuizGame()" aria-label="Timer" class="text-primary hover:text-secondary transition-colors" title="Chơi Quiz Ngay">
-                <span class="material-symbols-outlined">timer</span>
-            </button>
-        </div>
-    </div>
-</header>
-
-<!-- HOME VIEW (Default view with Giant PLAY button) -->
-<div id="home-view" class="pt-24 min-h-screen flex flex-col justify-between">
-    <section class="relative py-12 px-margin-mobile md:px-margin-desktop bg-charcoal grid-bg border-b-4 border-burgundy-deep overflow-hidden my-auto">
-        <div class="max-w-container-max mx-auto text-center flex flex-col items-center gap-6 relative z-10">
-            
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-burgundy-deep/80 border border-primary/40 text-primary text-label-caps font-label-caps tracking-widest uppercase">
-                <span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
-                Giáo Trình VNR202 • Lịch Sử Đổi Mới
+    <!-- TOP APP BAR HEADER -->
+    <header
+        class="bg-surface docked full-width border-b-2 border-burgundy-deep shadow-[4px_4px_0px_0px_rgba(88,12,16,1)] fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20">
+        <div class="flex items-center gap-4 cursor-pointer" onclick="showHomeView()">
+            <div
+                class="w-10 h-10 rounded-full bg-burgundy-deep border-2 border-secondary flex items-center justify-center font-bold text-secondary text-xl">
+                ★
             </div>
-
-            <h1 class="text-headline-lg-mobile md:text-display-hero font-display-hero font-extrabold text-secondary tracking-tight uppercase drop-shadow-[4px_4px_0_rgba(88,12,16,1)] max-w-4xl leading-tight">
-                HÀNH TRÌNH ĐỔI MỚI <span class="text-primary block text-2xl md:text-5xl mt-2">(1986 – 1996)</span>
+            <h1 class="text-headline-md font-headline-md font-extrabold tracking-tight text-primary uppercase">
+                THE RENEWAL JOURNEY
             </h1>
+        </div>
 
-            <p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl italic">
-                "Đưa đất nước ra khỏi khủng hoảng kinh tế – xã hội. Bạn có sẵn sàng thử thách vốn kiến thức VNR202 qua bộ 15 câu hỏi trắc nghiệm?"
-            </p>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 my-4 w-full max-w-3xl">
-                <div class="bg-surface-container border-2 border-burgundy-deep p-4 rounded-lg text-center">
-                    <div class="text-label-caps font-label-caps text-on-surface-variant uppercase">Số câu hỏi</div>
-                    <div class="text-stat-value font-stat-value text-secondary">15</div>
-                </div>
-                <div class="bg-surface-container border-2 border-burgundy-deep p-4 rounded-lg text-center">
-                    <div class="text-label-caps font-label-caps text-on-surface-variant uppercase">Thời gian / câu</div>
-                    <div class="text-stat-value font-stat-value text-error-red">15s</div>
-                </div>
-                <div class="bg-surface-container border-2 border-burgundy-deep p-4 rounded-lg text-center">
-                    <div class="text-label-caps font-label-caps text-on-surface-variant uppercase">Điểm mỗi câu</div>
-                    <div class="text-stat-value font-stat-value text-success-green">100</div>
-                </div>
-                <div class="bg-surface-container border-2 border-burgundy-deep p-4 rounded-lg text-center">
-                    <div class="text-label-caps font-label-caps text-on-surface-variant uppercase">Điểm tối đa</div>
-                    <div class="text-stat-value font-stat-value text-primary">1500</div>
-                </div>
+        <div class="flex items-center gap-6">
+            <div id="header-question-counter"
+                class="hidden md:block text-label-caps font-label-caps text-on-surface-variant uppercase">
+                Q 01/15
             </div>
-
-            <!-- GIANT PLAY NOW BUTTON -->
-            <div class="flex flex-col items-center gap-4 mt-4 w-full">
-                <button onclick="startQuizGame()" class="pulse-glow group relative inline-flex items-center justify-center gap-4 bg-secondary hover:bg-gold-warm text-on-secondary font-extrabold text-2xl md:text-4xl px-12 md:px-20 py-6 md:py-8 rounded-2xl shadow-[6px_6px_0_0_rgba(88,12,16,1)] active:translate-y-1 transition-all transform hover:scale-105 cursor-pointer">
-                    <span class="material-symbols-outlined text-4xl md:text-6xl group-hover:rotate-12 transition-transform">play_circle</span>
-                    <span>BẮT ĐẦU CHƠI NGAY</span>
-                </button>
-                <div class="text-label-caps font-label-caps text-on-surface-variant flex items-center gap-4">
-                    <span>⚡ 15 Câu hỏi chuẩn VNR202</span>
-                    <span>•</span>
-                    <span>⏱️ 15s Mỗi câu hỏi</span>
-                    <span>•</span>
-                    <span>🏆 Danh hiệu Lãnh Đạo</span>
-                </div>
+            <div class="flex items-center gap-2">
+                <span id="header-timer-text" class="text-label-caps font-label-caps text-primary uppercase">00:15</span>
             </div>
-
-            <div class="flex flex-wrap justify-center gap-4 mt-8">
-                <button onclick="scrollToSection('timeline-section')" class="bg-surface-container border-2 border-outline-variant hover:border-gold-warm text-on-surface px-6 py-3 rounded-lg text-body-md font-body-md transition flex items-center gap-2">
-                    <span class="material-symbols-outlined text-secondary">timeline</span> Timeline Lịch Sử 1986–1996
+            <div class="flex items-center gap-4">
+                <button onclick="showHomeView()" aria-label="Home"
+                    class="text-primary hover:text-secondary transition-colors" title="Trang chủ">
+                    <span class="material-symbols-outlined">home</span>
                 </button>
-                <button onclick="scrollToSection('content-section')" class="bg-surface-container border-2 border-outline-variant hover:border-gold-warm text-on-surface px-6 py-3 rounded-lg text-body-md font-body-md transition flex items-center gap-2">
-                    <span class="material-symbols-outlined text-primary">menu_book</span> Bài Giảng VNR202 (6 Phần)
+                <button onclick="toggleSlideMode()" aria-label="Slide Mode"
+                    class="text-primary hover:text-secondary transition-colors" title="Chế độ Thuyết trình Slide">
+                    <span class="material-symbols-outlined">slideshow</span>
+                </button>
+                <button onclick="startQuizGame()" aria-label="Timer"
+                    class="text-primary hover:text-secondary transition-colors" title="Chơi Quiz Ngay">
+                    <span class="material-symbols-outlined">timer</span>
                 </button>
             </div>
         </div>
-    </section>
-</div>
+    </header>
 
-<!-- QUIZ GAME VIEW (Full-Screen Layout matching user template) -->
-<div id="quiz-view" class="hidden pt-20 flex-grow flex flex-col justify-center">
-    <main class="flex-grow py-8 px-margin-mobile md:px-margin-desktop flex flex-col items-center justify-center relative grid-bg">
-        <div class="w-full max-w-container-max flex flex-col gap-8 relative z-10">
-            
-            <!-- Quiz Header Info Card -->
-            <div class="flex flex-col md:flex-row justify-between items-center w-full gap-4 bg-surface-container p-6 rounded-lg border-2 border-burgundy-deep shadow-[4px_4px_0px_0px_rgba(88,12,16,1)]">
-                <div class="flex flex-col items-start gap-1">
-                    <span class="text-label-caps font-label-caps text-secondary uppercase tracking-widest">CÂU HỎI</span>
-                    <span class="text-stat-value font-stat-value text-primary">
-                        <span id="quiz-current-num">01</span> <span class="text-on-surface-variant text-headline-md font-headline-md">/ 15</span>
-                    </span>
+    <!-- HOME VIEW (Default view with Giant PLAY button) -->
+    <div id="home-view" class="pt-24 min-h-screen flex flex-col justify-between">
+        <section
+            class="relative py-12 px-margin-mobile md:px-margin-desktop bg-charcoal grid-bg border-b-4 border-burgundy-deep overflow-hidden my-auto">
+            <div class="max-w-container-max mx-auto text-center flex flex-col items-center gap-6 relative z-10">
+
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-burgundy-deep/80 border border-primary/40 text-primary text-label-caps font-label-caps tracking-widest uppercase">
+                    <span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+                    Giáo Trình • Lịch Sử Đổi Mới
                 </div>
-                <div class="flex flex-col items-end gap-2 w-full md:w-1/3">
-                    <div class="flex justify-between items-center w-full gap-3">
-                        <span class="text-label-caps font-label-caps text-error-red uppercase tracking-widest">THỜI GIAN</span>
-                        <div class="flex items-center gap-2">
-                            <span id="quiz-timer-val" class="text-stat-value font-stat-value text-error-red pulse-timer">00:15</span>
-                            <button id="btn-pause-quiz" onclick="togglePause()" aria-label="Tạm dừng" title="Tạm dừng / Tiếp tục (phím P)" class="text-primary hover:text-secondary transition-colors cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed">
-                                <span id="pause-icon" class="material-symbols-outlined text-4xl">pause_circle</span>
-                            </button>
+
+                <h1
+                    class="text-headline-lg-mobile md:text-display-hero font-display-hero font-extrabold text-secondary tracking-tight uppercase drop-shadow-[4px_4px_0_rgba(88,12,16,1)] max-w-4xl leading-tight">
+                    HÀNH TRÌNH ĐỔI MỚI <span class="text-primary block text-2xl md:text-5xl mt-2">(1986 – 1996)</span>
+                </h1>
+
+                <p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl italic">
+                    "Đưa đất nước ra khỏi khủng hoảng kinh tế – xã hội. Bạn có sẵn sàng thử thách vốn kiến thức
+                    qua bộ 15 câu hỏi trắc nghiệm?"
+                </p>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 my-4 w-full max-w-3xl">
+                    <div class="bg-surface-container border-2 border-burgundy-deep p-4 rounded-lg text-center">
+                        <div class="text-label-caps font-label-caps text-on-surface-variant uppercase">Số câu hỏi</div>
+                        <div class="text-stat-value font-stat-value text-secondary">15</div>
+                    </div>
+                    <div class="bg-surface-container border-2 border-burgundy-deep p-4 rounded-lg text-center">
+                        <div class="text-label-caps font-label-caps text-on-surface-variant uppercase">Thời gian / câu
                         </div>
+                        <div class="text-stat-value font-stat-value text-error-red">15s</div>
                     </div>
-                    <div class="w-full h-4 bg-charcoal border-2 border-burgundy-deep rounded-full overflow-hidden flex">
-                        <!-- Progress Bar segmented -->
-                        <div id="quiz-timer-bar" class="h-full bg-error-red w-full border-r border-burgundy-deep will-change-[width]"></div>
-                        <div id="quiz-timer-bg" class="h-full bg-surface-variant w-[0%]"></div>
+                    <div class="bg-surface-container border-2 border-burgundy-deep p-4 rounded-lg text-center">
+                        <div class="text-label-caps font-label-caps text-on-surface-variant uppercase">Điểm mỗi câu
+                        </div>
+                        <div class="text-stat-value font-stat-value text-success-green">100</div>
+                    </div>
+                    <div class="bg-surface-container border-2 border-burgundy-deep p-4 rounded-lg text-center">
+                        <div class="text-label-caps font-label-caps text-on-surface-variant uppercase">Điểm tối đa</div>
+                        <div class="text-stat-value font-stat-value text-primary">1500</div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Question Box -->
-            <div class="w-full text-center py-10 px-6 bg-surface-container-high rounded-lg border-l-4 border-primary-container shadow-xl">
-                <span id="question-category-tag" class="inline-block px-3 py-1 bg-burgundy-deep text-primary text-label-caps font-label-caps rounded mb-4"></span>
-                <h2 id="quiz-question-title" class="text-headline-lg-mobile md:text-headline-lg font-headline-lg-mobile md:font-headline-lg text-on-surface"></h2>
-            </div>
-
-            <!-- Answers Grid (4 Cards A, B, C, D) -->
-            <div id="answers-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-                <!-- Option cards will be dynamically rendered here -->
-            </div>
-
-            <!-- Small explanation note (Shown after selection) -->
-            <div id="quiz-explanation-card" class="hidden bg-surface-container border-l-4 p-4 rounded-lg shadow-md">
-                <div class="flex items-start gap-3">
-                    <span id="exp-icon" class="material-symbols-outlined text-2xl flex-shrink-0"></span>
-                    <div class="flex-grow space-y-1 min-w-0">
-                        <p id="exp-status-title" class="font-bold text-sm uppercase tracking-wide"></p>
-                        <p id="exp-body-text" class="text-sm text-on-surface/90 leading-relaxed"></p>
-                        <p id="exp-citation-text" class="text-xs text-secondary italic"></p>
+                <!-- GIANT PLAY NOW BUTTON -->
+                <div class="flex flex-col items-center gap-4 mt-4 w-full">
+                    <button onclick="startQuizGame()"
+                        class="pulse-glow group relative inline-flex items-center justify-center gap-4 bg-secondary hover:bg-gold-warm text-on-secondary font-extrabold text-2xl md:text-4xl px-12 md:px-20 py-6 md:py-8 rounded-2xl shadow-[6px_6px_0_0_rgba(88,12,16,1)] active:translate-y-1 transition-all transform hover:scale-105 cursor-pointer">
+                        <span
+                            class="material-symbols-outlined text-4xl md:text-6xl group-hover:rotate-12 transition-transform">play_circle</span>
+                        <span>BẮT ĐẦU CHƠI NGAY</span>
+                    </button>
+                    <div class="text-label-caps font-label-caps text-on-surface-variant flex items-center gap-4">
+                        <span>⚡ 15 Câu hỏi</span>
+                        <span>•</span>
+                        <span>⏱️ 15s Mỗi câu hỏi</span>
+                        <span>•</span>
+                        <span>🏆 Danh hiệu Lãnh Đạo</span>
                     </div>
-                    <button onclick="nextQuestion()" class="flex-shrink-0 self-center bg-secondary text-on-secondary font-bold text-sm px-5 py-2 rounded-lg shadow-[3px_3px_0_0_rgba(88,12,16,1)] hover:bg-gold-warm transition flex items-center gap-1 cursor-pointer">
-                        <span>Tiếp</span>
-                        <span class="material-symbols-outlined">arrow_forward</span>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-4 mt-8">
+                    <button onclick="scrollToSection('timeline-section')"
+                        class="bg-surface-container border-2 border-outline-variant hover:border-gold-warm text-on-surface px-6 py-3 rounded-lg text-body-md font-body-md transition flex items-center gap-2">
+                        <span class="material-symbols-outlined text-secondary">timeline</span> Timeline Lịch Sử
+                        1986–1996
+                    </button>
+                    <button onclick="scrollToSection('content-section')"
+                        class="bg-surface-container border-2 border-outline-variant hover:border-gold-warm text-on-surface px-6 py-3 rounded-lg text-body-md font-body-md transition flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">menu_book</span>Nội Dung (6 Phần)
                     </button>
                 </div>
             </div>
-
-            <!-- Final Result Screen (Shown after finishing 15 questions) -->
-            <div id="quiz-final-result" class="hidden bg-surface-container border-2 border-gold-warm p-8 rounded-lg shadow-[8px_8px_0_0_rgba(88,12,16,1)] text-center space-y-6">
-                <div class="w-24 h-24 mx-auto rounded-full bg-burgundy-deep border-4 border-secondary flex items-center justify-center text-secondary text-5xl">
-                    🏆
-                </div>
-                <h2 class="text-headline-lg font-headline-lg text-secondary uppercase">HOÀN THÀNH THỬ THÁCH VNR202!</h2>
-                <p class="text-body-lg text-on-surface-variant">Bạn đã vượt qua bộ 15 câu hỏi về Hành trình Đổi mới 1986–1996.</p>
-                
-                <div class="grid grid-cols-2 gap-6 max-w-md mx-auto">
-                    <div class="bg-surface p-4 rounded-lg border border-outline/20">
-                        <div class="text-label-caps font-label-caps text-on-surface-variant">Tổng số điểm</div>
-                        <div id="final-score-text" class="text-stat-value font-stat-value text-secondary">1500</div>
-                    </div>
-                    <div class="bg-surface p-4 rounded-lg border border-outline/20">
-                        <div class="text-label-caps font-label-caps text-on-surface-variant">Tỷ lệ chính xác</div>
-                        <div id="final-accuracy-text" class="text-stat-value font-stat-value text-success-green">100%</div>
-                    </div>
-                </div>
-
-                <div id="final-rank-title" class="inline-block px-8 py-3 bg-burgundy-deep border-2 border-secondary text-secondary font-headline-md text-headline-md rounded-full">
-                    Danh hiệu: Chuyên Gia Đổi Mới Xuất Sắc 🎖️
-                </div>
-
-                <div class="flex flex-wrap justify-center gap-4 pt-4">
-                    <button onclick="startQuizGame()" class="bg-secondary text-on-secondary font-headline-md font-bold px-8 py-4 rounded-lg shadow-[4px_4px_0_0_rgba(88,12,16,1)] hover:bg-gold-warm transition flex items-center gap-2">
-                        <span class="material-symbols-outlined">restart_alt</span>
-                        <span>Chơi Lại Từ Đầu</span>
-                    </button>
-                    <button onclick="showHomeView()" class="bg-surface-container-high border-2 border-outline-variant text-on-surface font-headline-md font-bold px-8 py-4 rounded-lg hover:bg-surface-variant transition flex items-center gap-2">
-                        <span class="material-symbols-outlined">home</span>
-                        <span>Trang Chủ VNR202</span>
-                    </button>
-                </div>
-            </div>
-
-        </div>
-    </main>
-</div>
-
-<!-- LECTURE CONTENT & TIMELINE SECTIONS (Always accessible) -->
-<div id="extra-sections" class="bg-surface">
-    <!-- TIMELINE SECTION -->
-    <section id="timeline-section" class="py-16 px-margin-mobile md:px-margin-desktop border-t-4 border-burgundy-deep bg-surface-container-low">
-        <div class="max-w-container-max mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 border-b-2 border-surface-variant pb-4 gap-4">
-                <div>
-                    <span class="text-label-caps font-label-caps text-secondary uppercase tracking-widest">DẤU MỐC LỊCH SỬ</span>
-                    <h2 class="text-headline-lg font-headline-lg text-primary uppercase drop-shadow">Tiến Trình Đổi Mới 1986 – 1996</h2>
-                </div>
-            </div>
-            
-            <div class="relative overflow-x-auto timeline-scroll py-6 px-4">
-                <div class="flex items-center gap-6 min-w-max">
-                    <div onclick="showMilestoneModal('1986')" class="cursor-pointer group relative flex flex-col bg-surface-container border-2 border-primary p-5 rounded-lg shadow-[4px_4px_0_0_rgba(88,12,16,1)] hover:-translate-y-2 transition-all w-72">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="font-stat-value text-stat-value text-primary">1986</span>
-                            <span class="px-2 py-0.5 bg-burgundy-deep text-primary text-xs font-bold rounded">15-18/12</span>
-                        </div>
-                        <h4 class="font-bold text-on-surface mb-1">Đại hội VI khởi xướng Đổi mới</h4>
-                        <p class="text-sm text-on-surface-variant">Khái sinh đường lối Đổi mới toàn diện, xóa bỏ cơ chế bao cấp.</p>
-                    </div>
-
-                    <div onclick="showMilestoneModal('1987')" class="cursor-pointer group relative flex flex-col bg-surface-container border-2 border-secondary p-5 rounded-lg shadow-[4px_4px_0_0_rgba(202,138,4,0.5)] hover:-translate-y-2 transition-all w-72">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="font-stat-value text-stat-value text-secondary">1987</span>
-                            <span class="px-2 py-0.5 bg-secondary/20 text-secondary text-xs font-bold rounded">HNTW 2 & QĐ 217</span>
-                        </div>
-                        <h4 class="font-bold text-on-surface mb-1">Chính sách "4 Giảm" & QĐ 217</h4>
-                        <p class="text-sm text-on-surface-variant">Trao quyền tự chủ hạch toán cho Doanh nghiệp Nhà nước.</p>
-                    </div>
-
-                    <div onclick="showMilestoneModal('1988')" class="cursor-pointer group relative flex flex-col bg-surface-container border-2 border-success-green p-5 rounded-lg shadow-[4px_4px_0_0_rgba(22,163,74,0.5)] hover:-translate-y-2 transition-all w-72">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="font-stat-value text-stat-value text-success-green">1988</span>
-                            <span class="px-2 py-0.5 bg-success-green/20 text-success-green text-xs font-bold rounded">Khoán 10</span>
-                        </div>
-                        <h4 class="font-bold text-on-surface mb-1">Khoán 10 & Bỏ Tem Phiếu</h4>
-                        <p class="text-sm text-on-surface-variant">Nông dân nhận đất 15 năm; xóa bỏ hoàn toàn tem phiếu bao cấp.</p>
-                    </div>
-
-                    <div onclick="showMilestoneModal('1989')" class="cursor-pointer group relative flex flex-col bg-surface-container border-2 border-primary p-5 rounded-lg shadow-[4px_4px_0_0_rgba(88,12,16,1)] hover:-translate-y-2 transition-all w-72">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="font-stat-value text-stat-value text-primary">1989</span>
-                            <span class="px-2 py-0.5 bg-burgundy-deep text-primary text-xs font-bold rounded">Xuất Khẩu Gạo</span>
-                        </div>
-                        <h4 class="font-bold text-on-surface mb-1">Kỳ Tích Xuất Khẩu Gạo</h4>
-                        <p class="text-sm text-on-surface-variant">Lần đầu tự túc và xuất khẩu 1.4 triệu tấn gạo. Rút quân Campuchia.</p>
-                    </div>
-
-                    <div onclick="showMilestoneModal('1991')" class="cursor-pointer group relative flex flex-col bg-surface-container border-2 border-secondary p-5 rounded-lg shadow-[4px_4px_0_0_rgba(202,138,4,0.5)] hover:-translate-y-2 transition-all w-72">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="font-stat-value text-stat-value text-secondary">1991</span>
-                            <span class="px-2 py-0.5 bg-secondary/20 text-secondary text-xs font-bold rounded">Đại Hội VII</span>
-                        </div>
-                        <h4 class="font-bold text-on-surface mb-1">Cương Lĩnh 1991 & Chiến Lược 2000</h4>
-                        <p class="text-sm text-on-surface-variant">Xác định rõ mô hình kinh tế thị trường định hướng XHCN.</p>
-                    </div>
-
-                    <div onclick="showMilestoneModal('1995')" class="cursor-pointer group relative flex flex-col bg-surface-container border-2 border-secondary p-5 rounded-lg shadow-[4px_4px_0_0_rgba(202,138,4,0.5)] hover:-translate-y-2 transition-all w-72">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="font-stat-value text-stat-value text-secondary">1995</span>
-                            <span class="px-2 py-0.5 bg-secondary/20 text-secondary text-xs font-bold rounded">ASEAN & Việt - Mỹ</span>
-                        </div>
-                        <h4 class="font-bold text-on-surface mb-1">Hội Nhập Quốc Tế Lịch Sử</h4>
-                        <p class="text-sm text-on-surface-variant">Gia nhập ASEAN (28/7) & Bình thường hóa quan hệ Việt - Mỹ (11/7).</p>
-                    </div>
-
-                    <div onclick="showMilestoneModal('1996')" class="cursor-pointer group relative flex flex-col bg-surface-container border-2 border-success-green p-5 rounded-lg shadow-[4px_4px_0_0_rgba(22,163,74,0.5)] hover:-translate-y-2 transition-all w-72">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="font-stat-value text-stat-value text-success-green">1996</span>
-                            <span class="px-2 py-0.5 bg-success-green/20 text-success-green text-xs font-bold rounded">Đại Hội VIII</span>
-                        </div>
-                        <h4 class="font-bold text-on-surface mb-1">Thoát Khủng Hoảng 20 Năm</h4>
-                        <p class="text-sm text-on-surface-variant">Tuyên bố chính thức ra khỏi khủng hoảng kinh tế – xã hội!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTENT SECTION (6 PARTS) -->
-    <section id="content-section" class="py-16 px-margin-mobile md:px-margin-desktop bg-surface border-t-4 border-burgundy-deep">
-        <div class="max-w-container-max mx-auto">
-            <div class="text-center mb-8">
-                <span class="text-label-caps font-label-caps text-secondary uppercase tracking-widest">NỘI DUNG GIÁO TRÌNH VNR202</span>
-                <h2 class="text-headline-lg font-headline-lg text-primary uppercase mt-1">Toàn Văn Bài Giảng 6 Phần</h2>
-            </div>
-
-            <div class="flex flex-wrap gap-2 justify-center mb-8">
-                <button onclick="switchTab(1)" id="t-btn-1" class="px-4 py-2 rounded font-bold text-sm bg-burgundy-deep text-primary border border-primary">Phần I: Bối cảnh</button>
-                <button onclick="switchTab(2)" id="t-btn-2" class="px-4 py-2 rounded font-bold text-sm bg-surface-container text-on-surface-variant border border-outline/20">Phần II: Đại hội VI</button>
-                <button onclick="switchTab(3)" id="t-btn-3" class="px-4 py-2 rounded font-bold text-sm bg-surface-container text-on-surface-variant border border-outline/20">Phần III: Chính sách 1987–1990</button>
-                <button onclick="switchTab(4)" id="t-btn-4" class="px-4 py-2 rounded font-bold text-sm bg-surface-container text-on-surface-variant border border-outline/20">Phần IV: Kết quả bước đầu</button>
-                <button onclick="switchTab(5)" id="t-btn-5" class="px-4 py-2 rounded font-bold text-sm bg-surface-container text-on-surface-variant border border-outline/20">Phần V: Đại hội VII</button>
-                <button onclick="switchTab(6)" id="t-btn-6" class="px-4 py-2 rounded font-bold text-sm bg-surface-container text-on-surface-variant border border-outline/20">Phần VI: Thoát khủng hoảng</button>
-            </div>
-
-            <div class="bg-surface-container border-2 border-burgundy-deep p-8 rounded-lg leading-relaxed text-on-surface">
-                <div id="c-panel-1" class="space-y-4">
-                    <h3 class="text-headline-md font-headline-md text-secondary border-b border-outline/20 pb-2">I. BỐI CẢNH TRƯỚC ĐẠI HỘI VI: VÌ SAO VIỆT NAM PHẢI ĐỔI MỚI?</h3>
-                    <p class="text-body-lg text-on-surface-variant">Sau thống nhất 1975, Việt Nam bước vào quá trình xây dựng CNXH với xuất phát điểm rất thấp, hậu quả chiến tranh nặng nề, chịu chiến tranh biên giới và bị bao vây cấm vận. Đất nước rơi vào khủng hoảng kinh tế - xã hội kéo dài.</p>
-                    <p class="text-body-md"><strong class="text-error-red">Lạm phát phi mã:</strong> Năm 1985 khoảng 300%, tăng vọt lên mức <strong>774.7% năm 1986</strong>. Nguyên nhân chủ yếu do duy trì quá lâu cơ chế tập trung quan liêu bao cấp và nóng vội trong cải tạo XHCN.</p>
-                </div>
-
-                <div id="c-panel-2" class="hidden space-y-4">
-                    <h3 class="text-headline-md font-headline-md text-secondary border-b border-outline/20 pb-2">II. ĐẠI HỘI VI (12/1986): BƯỚC NGOẶT KHỞI XƯỚNG ĐỔI MỚI TOÀN DIỆN</h3>
-                    <p class="text-body-lg text-on-surface-variant">Diễn ra từ 15 đến 18/12/1986 tại Hà Nội với phương châm: <em>"Nhìn thẳng vào sự thật, đánh giá đúng sự thật, nói rõ sự thật"</em>.</p>
-                    <p class="text-body-md">Đại hội xác định phát triển nền kinh tế nhiều thành phần, xóa bao cấp sang hạch toán kinh doanh, và tập trung vào <strong>3 chương trình kinh tế lớn: Lương thực – thực phẩm, Hàng tiêu dùng, Hàng xuất khẩu</strong>.</p>
-                </div>
-
-                <div id="c-panel-3" class="hidden space-y-4">
-                    <h3 class="text-headline-md font-headline-md text-secondary border-b border-outline/20 pb-3">III. GIAI ĐOẠN 1987–1990: BIẾN ĐƯỜNG LỐI THÀNH CHÍNH SÁCH CỤ THỂ</h3>
-                    <ul class="list-disc pl-5 space-y-2 text-body-md text-on-surface-variant">
-                        <li><strong>Chính sách "4 giảm" (04/1987):</strong> Giảm bội chi ngân sách, giảm nhịp độ tăng giá, giảm lạm phát, giảm khó khăn đời sống.</li>
-                        <li><strong>Quyết định 217-HĐBT (11/1987):</strong> Trao quyền tự chủ hạch toán kinh doanh cho Doanh nghiệp Nhà nước.</li>
-                        <li><strong>Khoán 10 (04/1988):</strong> Giao đất canh tác ổn định 15 năm cho hộ nông dân.</li>
-                        <li><strong>Bỏ Tem Phiếu (Cuối năm 1988):</strong> Xóa bỏ hoàn toàn chế độ phân phối tem phiếu bao cấp.</li>
-                        <li><strong>Luật Đầu tư nước ngoài (01/01/1988):</strong> Thu hút nguồn vốn FDI.</li>
-                    </ul>
-                </div>
-
-                <div id="c-panel-4" class="hidden space-y-4">
-                    <h3 class="text-headline-md font-headline-md text-secondary border-b border-outline/20 pb-3">IV. KẾT QUẢ BƯỚC ĐẦU SAU HƠN 4 NĂM ĐỔI MỚI (1986–1990)</h3>
-                    <p class="text-body-md text-on-surface-variant">Lạm phát giảm từ 774.7% (1986) xuống 67.4% (1990). Năm 1988 nhập 45 vạn tấn gạo, đến năm 1989 đã tự túc, dự trữ và xuất khẩu 1.4 triệu tấn gạo!</p>
-                </div>
-
-                <div id="c-panel-5" class="hidden space-y-4">
-                    <h3 class="text-headline-md font-headline-md text-secondary border-b border-outline/20 pb-3">V. ĐẠI HỘI VII (06/1991): XÁC ĐỊNH RÕ HƠN MÔ HÌNH PHÁT TRIỂN</h3>
-                    <p class="text-body-md text-on-surface-variant">Thông qua Cương lĩnh 1991 và Chiến lược phát triển KT-XH đến năm 2000 (mục tiêu gấp đôi GDP năm 2000 so với 1990). Khẳng định nền kinh tế thị trường định hướng XHCN.</p>
-                </div>
-
-                <div id="c-panel-6" class="hidden space-y-4">
-                    <h3 class="text-headline-md font-headline-md text-secondary border-b border-outline/20 pb-3">VI. THỂ CHẾ HÓA 1991–1995 VÀ ĐẠI HỘI VIII (1996) THOÁT KHỦNG HOẢNG</h3>
-                    <p class="text-body-md text-on-surface-variant">Thông qua Hiến pháp 1992. Đột phá đối ngoại 1995 (Bình thường hóa quan hệ Việt - Mỹ 11/7, Gia nhập ASEAN 28/7). Đại hội VIII (1996) tuyên bố đất nước ra khỏi khủng hoảng kinh tế – xã hội kéo dài 20 năm!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
-
-<!-- FOOTER -->
-<footer class="bg-charcoal w-full py-8 px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-4 border-t-2 border-burgundy-deep">
-    <div class="text-label-caps font-label-caps text-secondary uppercase">A Digital History Initiative • VNR202</div>
-    <nav class="flex gap-6">
-        <a class="text-on-surface-variant text-label-caps font-label-caps hover:text-primary transition-colors uppercase" href="#" onclick="showHomeView()">Home</a>
-        <a class="text-on-surface-variant text-label-caps font-label-caps hover:text-primary transition-colors uppercase" href="#" onclick="startQuizGame()">Quiz Game</a>
-        <a class="text-on-surface-variant text-label-caps font-label-caps hover:text-primary transition-colors uppercase" href="#" onclick="scrollToSection('timeline-section')">Timeline</a>
-        <a class="text-on-surface-variant text-label-caps font-label-caps hover:text-primary transition-colors uppercase" href="#" onclick="scrollToSection('content-section')">Archive</a>
-    </nav>
-</footer>
-
-<!-- MILESTONE MODAL -->
-<div id="milestone-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-surface-container border-2 border-secondary p-6 md:p-8 rounded-lg max-w-xl w-full shadow-2xl relative">
-        <button onclick="closeMilestoneModal()" class="absolute top-4 right-4 text-on-surface-variant hover:text-white text-xl font-bold">✕</button>
-        <div id="modal-year-tag" class="inline-block px-3 py-1 bg-burgundy-deep text-secondary text-label-caps font-label-caps rounded mb-2">1986</div>
-        <h3 id="modal-title" class="text-headline-md font-headline-md text-primary mb-3">Tên Cột Mốc</h3>
-        <div id="modal-body" class="text-body-md text-on-surface-variant leading-relaxed"></div>
-    </div>
-</div>
-
-<!-- SLIDE MODE MODAL -->
-<div id="slide-modal" class="hidden fixed inset-0 z-50 bg-background text-on-surface flex flex-col justify-between p-6 md:p-12">
-    <div class="flex justify-between items-center border-b border-outline/20 pb-4">
-        <div class="flex items-center gap-2">
-            <span class="text-secondary font-bold text-xl">★ THUYẾT TRÌNH VNR202</span>
-            <span id="slide-index-indicator" class="text-xs text-on-surface-variant bg-surface-container px-3 py-1 rounded-full">Slide 1 / 6</span>
-        </div>
-        <button onclick="toggleSlideMode()" class="text-primary hover:text-white text-sm font-bold flex items-center gap-1">
-            <span>Thoát Slide</span> <span class="material-symbols-outlined">close</span>
-        </button>
+        </section>
     </div>
 
-    <div class="max-w-4xl mx-auto w-full my-auto text-center" id="slide-content-area"></div>
+    <!-- QUIZ GAME VIEW (Full-Screen Layout matching user template) -->
+    <div id="quiz-view" class="hidden pt-20 flex-grow flex flex-col justify-center">
+        <main
+            class="flex-grow py-8 px-margin-mobile md:px-margin-desktop flex flex-col items-center justify-center relative grid-bg">
+            <div class="w-full max-w-container-max flex flex-col gap-8 relative z-10">
 
-    <div class="flex justify-between items-center border-t border-outline/20 pt-4">
-        <button onclick="prevSlide()" class="bg-surface-container border border-outline/30 px-6 py-2 rounded-lg text-sm font-bold hover:bg-surface-container-high transition">◄ Slide Trước</button>
-        <div class="text-xs text-on-surface-variant">Dùng phím Mũi Tên Trái/Phải để chuyển slide</div>
-        <button onclick="nextSlide()" class="bg-secondary text-on-secondary px-6 py-2 rounded-lg text-sm font-bold hover:bg-gold-warm transition">Slide Tiếp ►</button>
+                <!-- Quiz Header Info Card -->
+                <div
+                    class="flex flex-col md:flex-row justify-between items-center w-full gap-4 bg-surface-container p-6 rounded-lg border-2 border-burgundy-deep shadow-[4px_4px_0px_0px_rgba(88,12,16,1)]">
+                    <div class="flex flex-col items-start gap-1">
+                        <span class="text-label-caps font-label-caps text-secondary uppercase tracking-widest">CÂU
+                            HỎI</span>
+                        <span class="text-stat-value font-stat-value text-primary">
+                            <span id="quiz-current-num">01</span> <span
+                                class="text-on-surface-variant text-headline-md font-headline-md">/ 15</span>
+                        </span>
+                    </div>
+                    <div class="flex flex-col items-end gap-2 w-full md:w-1/3">
+                        <div class="flex justify-between items-center w-full gap-3">
+                            <span class="text-label-caps font-label-caps text-error-red uppercase tracking-widest">THỜI
+                                GIAN</span>
+                            <div class="flex items-center gap-2">
+                                <span id="quiz-timer-val"
+                                    class="text-stat-value font-stat-value text-error-red pulse-timer">00:15</span>
+                                <button id="btn-pause-quiz" onclick="togglePause()" aria-label="Tạm dừng"
+                                    title="Tạm dừng / Tiếp tục (phím P)"
+                                    class="text-primary hover:text-secondary transition-colors cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed">
+                                    <span id="pause-icon" class="material-symbols-outlined text-4xl">pause_circle</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div
+                            class="w-full h-4 bg-charcoal border-2 border-burgundy-deep rounded-full overflow-hidden flex">
+                            <!-- Progress Bar segmented -->
+                            <div id="quiz-timer-bar"
+                                class="h-full bg-error-red w-full border-r border-burgundy-deep will-change-[width]">
+                            </div>
+                            <div id="quiz-timer-bg" class="h-full bg-surface-variant w-[0%]"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question Box -->
+                <div
+                    class="w-full text-center py-10 px-6 bg-surface-container-high rounded-lg border-l-4 border-primary-container shadow-xl">
+                    <span id="question-category-tag"
+                        class="inline-block px-3 py-1 bg-burgundy-deep text-primary text-label-caps font-label-caps rounded mb-4"></span>
+                    <h2 id="quiz-question-title"
+                        class="text-headline-lg-mobile md:text-headline-lg font-headline-lg-mobile md:font-headline-lg text-on-surface">
+                    </h2>
+                </div>
+
+                <!-- Answers Grid (4 Cards A, B, C, D) -->
+                <div id="answers-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+                    <!-- Option cards will be dynamically rendered here -->
+                </div>
+
+                <!-- Small explanation note (Shown after selection) -->
+                <div id="quiz-explanation-card" class="hidden bg-surface-container border-l-4 p-4 rounded-lg shadow-md">
+                    <div class="flex items-start gap-3">
+                        <span id="exp-icon" class="material-symbols-outlined text-2xl flex-shrink-0"></span>
+                        <div class="flex-grow space-y-1 min-w-0">
+                            <p id="exp-status-title" class="font-bold text-sm uppercase tracking-wide"></p>
+                            <p id="exp-body-text" class="text-sm text-on-surface/90 leading-relaxed"></p>
+                            <p id="exp-citation-text" class="text-xs text-secondary italic"></p>
+                        </div>
+                        <button onclick="nextQuestion()"
+                            class="flex-shrink-0 self-center bg-secondary text-on-secondary font-bold text-sm px-5 py-2 rounded-lg shadow-[3px_3px_0_0_rgba(88,12,16,1)] hover:bg-gold-warm transition flex items-center gap-1 cursor-pointer">
+                            <span>Tiếp</span>
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Final Result Screen (Shown after finishing 15 questions) -->
+                <div id="quiz-final-result"
+                    class="hidden bg-surface-container border-2 border-gold-warm p-8 rounded-lg shadow-[8px_8px_0_0_rgba(88,12,16,1)] text-center space-y-6">
+                    <div
+                        class="w-24 h-24 mx-auto rounded-full bg-burgundy-deep border-4 border-secondary flex items-center justify-center text-secondary text-5xl">
+                        🏆
+                    </div>
+                    <h2 class="text-headline-lg font-headline-lg text-secondary uppercase">HOÀN THÀNH THỬ THÁCH</h2>
+                    <p class="text-body-lg text-on-surface-variant">Bạn đã vượt qua bộ 15 câu hỏi về Hành trình Đổi mới
+                        1986–1996.</p>
+
+                    <div class="grid grid-cols-2 gap-6 max-w-md mx-auto">
+                        <div class="bg-surface p-4 rounded-lg border border-outline/20">
+                            <div class="text-label-caps font-label-caps text-on-surface-variant">Tổng số điểm</div>
+                            <div id="final-score-text" class="text-stat-value font-stat-value text-secondary">1500</div>
+                        </div>
+                        <div class="bg-surface p-4 rounded-lg border border-outline/20">
+                            <div class="text-label-caps font-label-caps text-on-surface-variant">Tỷ lệ chính xác</div>
+                            <div id="final-accuracy-text" class="text-stat-value font-stat-value text-success-green">
+                                100%</div>
+                        </div>
+                    </div>
+
+                    <div id="final-rank-title"
+                        class="inline-block px-8 py-3 bg-burgundy-deep border-2 border-secondary text-secondary font-headline-md text-headline-md rounded-full">
+                        Chúc mừng bạn đã hoàn thành hành trình!
+                    </div>
+
+                    <div class="flex flex-wrap justify-center gap-4 pt-4">
+                        <button onclick="startQuizGame()"
+                            class="bg-secondary text-on-secondary font-headline-md font-bold px-8 py-4 rounded-lg shadow-[4px_4px_0_0_rgba(88,12,16,1)] hover:bg-gold-warm transition flex items-center gap-2">
+                            <span class="material-symbols-outlined">restart_alt</span>
+                            <span>Chơi Lại Từ Đầu</span>
+                        </button>
+                        <button onclick="showHomeView()"
+                            class="bg-surface-container-high border-2 border-outline-variant text-on-surface font-headline-md font-bold px-8 py-4 rounded-lg hover:bg-surface-variant transition flex items-center gap-2">
+                            <span class="material-symbols-outlined">home</span>
+                            <span>Trang Chủ</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </main>
     </div>
-</div>
 
-<!-- JAVASCRIPT APP LOGIC -->
-<script>
-    // -------------------------------------------------------------------
-    // 15 VNR202 TEXTBOOK QUESTIONS (PDF tr. 128-137)
-    // -------------------------------------------------------------------
-    const quizData = [
-        {
-            category: "PHẦN I: BỐI CẢNH TRƯỚC ĐỔI MỚI",
-            question: "Theo giáo trình, lạm phát của Việt Nam năm <span class=\"text-secondary\">1986</span> đạt mức khoảng bao nhiêu %?",
-            options: [
-                { letter: "A", text: "Khoảng 300%", icon: "trending_down" },
-                { letter: "B", text: "Khoảng 393,3%", icon: "percent" },
-                { letter: "C", text: "Khoảng 774%", icon: "show_chart" },
-                { letter: "D", text: "Khoảng 67,4%", icon: "bar_chart" }
-            ],
-            answer: 2,
-            explanation: "Lạm phát từ khoảng 300% năm 1985 tăng vọt lên khoảng 774% (774,7%) năm 1986 — chỉ báo trực quan nhất thể hiện mức độ nghiêm trọng của cuộc khủng hoảng kinh tế – xã hội.",
-            citation: "Nguồn: Giáo trình VNR202, PDF tr. 128."
-        },
-        {
-            category: "PHẦN I: BỐI CẢNH TRƯỚC ĐỔI MỚI",
-            question: "Trong các nguyên nhân của khủng hoảng trước Đại hội VI, giáo trình nhấn mạnh nguyên nhân <span class=\"text-secondary\">chủ quan</span> quan trọng nhất là gì?",
-            options: [
-                { letter: "A", text: "Chiến tranh bảo vệ biên giới Tây Nam và phía Bắc", icon: "shield" },
-                { letter: "B", text: "Bị bao vây, cấm vận trong nhiều năm", icon: "block" },
-                { letter: "C", text: "Nguồn viện trợ nước ngoài giảm mạnh", icon: "trending_down" },
-                { letter: "D", text: "Duy trì quá lâu cơ chế tập trung, quan liêu, bao cấp", icon: "lock" }
-            ],
-            answer: 3,
-            explanation: "Về khách quan: xuất phát điểm thấp, hậu quả chiến tranh, chiến tranh biên giới, cấm vận, viện trợ giảm. Nhưng giáo trình nhấn mạnh nguyên nhân chủ quan: sai lầm trong đánh giá tình hình, nóng vội cải tạo XHCN và đặc biệt là duy trì quá lâu cơ chế tập trung, quan liêu, bao cấp.",
-            citation: "Nguồn: Giáo trình VNR202, PDF tr. 128."
-        },
-        {
-            category: "PHẦN I: BỐI CẢNH TRƯỚC ĐỔI MỚI",
-            question: "Quá trình hình thành tư duy Đổi mới được ghi nhận qua ba mốc khảo nghiệm thực tiễn: tháng 8/1979, tháng 6/1985 và <span class=\"text-secondary\">tháng nào</span>?",
-            options: [
-                { letter: "A", text: "Tháng 8/1986", icon: "event" },
-                { letter: "B", text: "Tháng 12/1986", icon: "calendar_month" },
-                { letter: "C", text: "Tháng 4/1987", icon: "today" },
-                { letter: "D", text: "Tháng 3/1989", icon: "date_range" }
-            ],
-            answer: 0,
-            explanation: "Ba mốc thường được nhắc tới là 8/1979, 6/1985 và 8/1986. Kết luận Bộ Chính trị tháng 8/1986 về cơ cấu sản xuất, kinh tế nhiều thành phần và đổi mới cơ chế quản lý là bước chuẩn bị trực tiếp cho đường lối Đổi mới tại Đại hội VI.",
-            citation: "Nguồn: Giáo trình VNR202, PDF tr. 128–129."
-        },
-        {
-            category: "PHẦN II: ĐẠI HỘI VI (12/1986)",
-            question: "<span class=\"text-secondary\">Đại hội đại biểu toàn quốc lần thứ VI</span> của Đảng diễn ra tại đâu và trong thời gian nào?",
-            options: [
-                { letter: "A", text: "24–27/6/1991 tại Hà Nội", icon: "event_busy" },
-                { letter: "B", text: "15–18/12/1986 tại Hà Nội", icon: "event_available" },
-                { letter: "C", text: "28/6–1/7/1996 tại Hà Nội", icon: "event" },
-                { letter: "D", text: "15–18/12/1986 tại Thành phố Hồ Chí Minh", icon: "location_city" }
-            ],
-            answer: 1,
-            explanation: "Đại hội VI diễn ra tại Hà Nội từ 15 đến 18/12/1986, đúng lúc đất nước khủng hoảng KT–XH nặng nề, lương thực – hàng tiêu dùng khan hiếm, lạm phát rất cao và còn bị bao vây, cấm vận.",
-            citation: "Nguồn: Giáo trình VNR202, PDF tr. 129."
-        },
-        {
-            category: "PHẦN II: ĐẠI HỘI VI (12/1986)",
-            question: "Ba chương trình kinh tế lớn mà <span class=\"text-secondary\">Đại hội VI</span> yêu cầu tập trung nguồn lực là gì?",
-            options: [
-                { letter: "A", text: "Công nghiệp nặng – Điện lực – Nông nghiệp", icon: "precision_manufacturing" },
-                { letter: "B", text: "Giao thông – Giáo dục – Y tế", icon: "local_shipping" },
-                { letter: "C", text: "Lương thực – thực phẩm, Hàng tiêu dùng, Hàng xuất khẩu", icon: "rice_bowl" },
-                { letter: "D", text: "Dầu khí – Thủy điện – Hàng xuất khẩu", icon: "oil_barrel" }
-            ],
-            answer: 2,
-            explanation: "Trước Đổi mới, khó khăn lớn nhất là thiếu lương thực, thiếu hàng tiêu dùng và thiếu nguồn ngoại tệ. Thay vì dàn trải nguồn lực, Đại hội VI yêu cầu tập trung giải quyết những nhu cầu thiết yếu nhất qua 3 chương trình: lương thực – thực phẩm, hàng tiêu dùng, hàng xuất khẩu.",
-            citation: "Nguồn: Giáo trình VNR202, PDF tr. 129."
-        },
-        {
-            category: "PHẦN II: ĐẠI HỘI VI (12/1986)",
-            question: "Giáo trình chỉ rõ một <span class=\"text-secondary\">hạn chế</span> của Đại hội VI là gì?",
-            options: [
-                { letter: "A", text: "Chưa tìm ra giải pháp thật hiệu quả để tháo gỡ ngay tình trạng rối ren trong phân phối và lưu thông", icon: "report_problem" },
-                { letter: "B", text: "Chưa thừa nhận sự tồn tại của nền kinh tế nhiều thành phần", icon: "block" },
-                { letter: "C", text: "Chưa đặt vấn đề xóa bỏ cơ chế tập trung, bao cấp", icon: "money_off" },
-                { letter: "D", text: "Chưa quan tâm tới chính sách xã hội", icon: "diversity_3" }
-            ],
-            answer: 0,
-            explanation: "Đại hội VI là Đại hội khởi xướng đường lối đổi mới toàn diện, nhưng giáo trình chỉ rõ hạn chế: chưa tìm ra giải pháp thật hiệu quả để tháo gỡ ngay tình trạng rối ren trong phân phối và lưu thông, nên giai đoạn 1987–1990 phải tiếp tục đưa ra các chính sách cụ thể hơn.",
-            citation: "Nguồn: Giáo trình VNR202, PDF tr. 130."
-        },
-        {
-            category: "PHẦN III: CHÍNH SÁCH 1987–1990",
-            question: "Chính sách <span class=\"text-secondary\">\"bốn giảm\"</span> tại Hội nghị Trung ương 2 khóa VI (4/1987) gồm những nội dung nào?",
-            options: [
-                { letter: "A", text: "Giảm thuế – giảm giá – giảm lương – giảm chi tiêu", icon: "savings" },
-                { letter: "B", text: "Giảm bội chi ngân sách – giảm nhịp độ tăng giá – giảm lạm phát – giảm khó khăn về đời sống nhân dân", icon: "trending_down" },
-                { letter: "C", text: "Giảm nhập khẩu – giảm xuất khẩu – giảm đầu tư – giảm tiêu dùng", icon: "swap_vert" },
-                { letter: "D", text: "Giảm giá điện – giảm giá xăng – giảm giờ làm – giảm biên chế", icon: "bolt" }
-            ],
-            answer: 1,
-            explanation: "HNTW 2 (4/1987) tập trung xử lý vấn đề cấp bách của phân phối và lưu thông với chính sách 'bốn giảm'; đồng thời giải thể các trạm kiểm soát hàng hóa, thực hiện cơ chế một giá, chế độ lương thống nhất, chuyển đơn vị quốc doanh sang hạch toán kinh doanh.",
-            citation: "Nguồn: Giáo trình VNR202, PDF tr. 131."
-        },
-        {
-            category: "PHẦN III: CHÍNH SÁCH 1987–1990",
-            question: "<span class=\"text-secondary\">Quyết định 217-HĐBT</span> ngày 14/11/1987 có nội dung cốt lõi là gì?",
-            options: [
-                { letter: "A", text: "Giải thể các trạm kiểm soát hàng hóa trên các tuyến giao thông", icon: "road" },
-                { letter: "B", text: "Thực hiện cơ chế một giá trong lưu thông hàng hóa", icon: "price_change" },
-                { letter: "C", text: "Trao quyền tự chủ cho doanh nghiệp quốc doanh, chuyển sang hạch toán kinh doanh", icon: "store" },
-                { letter: "D", text: "Khoán sản phẩm cuối cùng đến nhóm hộ và hộ xã viên", icon: "agriculture" }
-            ],
-            answer: 2,
-            explanation: "QĐ 217-HĐBT trao quyền tự chủ cho các doanh nghiệp quốc doanh: cơ chế quản lý thay đổi theo hướng giảm bao cấp, doanh nghiệp có nhiều trách nhiệm và chủ động hơn trong sản xuất, kinh doanh theo hạch toán.",
-            citation: "Nguồn: Giáo trình VNR202, PDF tr. 131."
-        },
-        {
-            category: "PHẦN III: CHÍNH SÁCH 1987–1990",
-            question: "Theo <span class=\"text-secondary\">Khoán 10</span> (Nghị quyết 10 của Bộ Chính trị, 4/1988), người nông dân được canh tác trên diện tích ổn định trong bao nhiêu năm và bảo đảm thu nhập từ bao nhiêu trở lên?",
-            options: [
-                { letter: "A", text: "10 năm – từ 30% sản lượng khoán", icon: "schedule" },
-                { letter: "B", text: "15 năm – từ 40% sản lượng khoán trở lên", icon: "agriculture" },
-                { letter: "C", text: "20 năm – từ 50% sản lượng khoán", icon: "landscape" },
-                { letter: "D", text: "25 năm – từ 60% sản lượng khoán", icon: "workspace_premium" }
-            ],
-            answer: 1,
-            explanation: "Khoán 10: khoán sản phẩm cuối cùng đến nhóm hộ và hộ xã viên; người nông dân được nhận khoán, canh tác trên diện tích ổn định trong 15 năm, bảo đảm thu nhập từ 40% sản lượng khoán trở lên — tăng quyền chủ động và động lực sản xuất.",
-            citation: "Nguồn: Giáo trình VNR202, PDF tr. 131."
-        },
-        {
-            category: "PHẦN III: CHÍNH SÁCH 1987–1990",
-            question: "Chế độ phân phối theo <span class=\"text-secondary\">tem phiếu</span> — biểu hiện điển hình của cơ chế phân phối bao cấp — được xóa bỏ vào thời điểm nào?",
-            options: [
-                { letter: "A", text: "Cuối năm 1986", icon: "event" },
-                { letter: "B", text: "Cuối năm 1987", icon: "event_repeat" },
-                { letter: "C", text: "Cuối năm 1989", icon: "today" },
-                { letter: "D", text: "Cuối năm 1988", icon: "confirmation_number" }
-            ],
-            answer: 3,
-            explanation: "Cuối năm 1988 tem phiếu được xóa bỏ. Sau đó hàng tiêu dùng đa dạng hơn, lưu thông tương đối thuận lợi — nền kinh tế chuyển dần từ phân phối hành chính sang lưu thông hàng hóa theo cơ chế mới.",
-            citation: "Nguồn: Giáo trình VNR202, PDF tr. 132."
-        },
-        {
-            category: "PHẦN IV: KẾT QUẢ BƯỚC ĐẦU",
-            question: "Chuyển biến về <span class=\"text-secondary\">lương thực</span> từ năm 1988 sang năm 1989 được giáo trình ghi nhận như thế nào?",
-            options: [
-                { letter: "A", text: "1988 còn nhập hơn 45 vạn tấn gạo; đến 1989 đáp ứng được nhu cầu, có dự trữ và xuất khẩu", icon: "eco" },
-                { letter: "B", text: "1988 đã xuất khẩu gạo; 1989 xuất khẩu gấp đôi", icon: "rocket_launch" },
-                { letter: "C", text: "Cả 1988 và 1989 đều phải nhập hơn 45 vạn tấn gạo", icon: "warning" },
-                { letter: "D", text: "1988 thiếu gạo nghiêm trọng; 1989 mới đủ ăn, chưa có dự trữ", icon: "rice_bowl" }
-            ],
-            answer: 0,
-            explanation: "Giáo trình ghi nhận năm 1988 Việt Nam vẫn phải nhập hơn 45 vạn tấn gạo; đến năm 1989 đã đáp ứng được nhu cầu, có dự trữ và xuất khẩu — một trong những chuyển biến dễ thấy nhất sau đổi mới nông nghiệp.",
-            citation: "Nguồn: Giáo trình VNR202, PDF tr. 132."
-        },
-        {
-            category: "PHẦN V: ĐẠI HỘI VII (06/1991)",
-            question: "<span class=\"text-secondary\">Đại hội VII</span> (6/1991) có điểm mới đặc biệt là thông qua hai văn kiện nào?",
-            options: [
-                { letter: "A", text: "Hiến pháp 1992 và Luật Đất đai 1993", icon: "menu_book" },
-                { letter: "B", text: "Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên CNXH (1991) và Chiến lược ổn định và phát triển KT-XH đến năm 2000", icon: "history_edu" },
-                { letter: "C", text: "Luật Doanh nghiệp 1990 và Luật Đầu tư nước ngoài", icon: "gavel" },
-                { letter: "D", text: "Kế hoạch 5 năm 1986–1990 và Cương lĩnh 1991", icon: "date_range" }
-            ],
-            answer: 1,
-            explanation: "Đại hội VII (24–27/6/1991) thông qua Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên CNXH năm 1991 và Chiến lược ổn định và phát triển kinh tế – xã hội đến năm 2000.",
-            citation: "Nguồn: Giáo trình VNR202, PDF tr. 135."
-        },
-        {
-            category: "PHẦN V: ĐẠI HỘI VII (06/1991)",
-            question: "Về tăng trưởng, <span class=\"text-secondary\">Chiến lược đến năm 2000</span> (Đại hội VII) đặt mục tiêu GDP năm 2000 như thế nào?",
-            options: [
-                { letter: "A", text: "Tăng gấp đôi GDP năm 1990", icon: "trending_up" },
-                { letter: "B", text: "Tăng gấp 5 lần GDP năm 1990", icon: "rocket_launch" },
-                { letter: "C", text: "Giữ nguyên quy mô GDP năm 1990", icon: "horizontal_rule" },
-                { letter: "D", text: "Tăng gấp 10 lần GDP năm 1990", icon: "attach_money" }
-            ],
-            answer: 0,
-            explanation: "Chiến lược đặt mục tiêu đưa đất nước ra khỏi khủng hoảng, ổn định KT-XH, vượt qua tình trạng nước nghèo và kém phát triển, với GDP năm 2000 tăng gấp đôi năm 1990.",
-            citation: "Nguồn: Giáo trình VNR202, PDF tr. 136."
-        },
-        {
-            category: "PHẦN VI: THỂ CHẾ HÓA 1991–1995",
-            question: "Tháng 4/1992, Quốc hội thông qua văn kiện nào, được xem là dấu mốc <span class=\"text-secondary\">thể chế hóa</span> đường lối Đổi mới sau Đại hội VII?",
-            options: [
-                { letter: "A", text: "Cương lĩnh xây dựng đất nước 1991", icon: "history_edu" },
-                { letter: "B", text: "Luật Đầu tư nước ngoài", icon: "handshake" },
-                { letter: "C", text: "Hiến pháp năm 1992", icon: "balance" },
-                { letter: "D", text: "Quyết định 217-HĐBT", icon: "assignment" }
-            ],
-            answer: 2,
-            explanation: "Tháng 4/1992, Quốc hội thông qua Hiến pháp năm 1992 — dấu mốc quan trọng trong quá trình tiếp tục thực hiện đường lối Đổi mới sau Đại hội VII.",
-            citation: "Nguồn: Giáo trình VNR202, PDF tr. 137."
-        },
-        {
-            category: "PHẦN VI: THỂ CHẾ HÓA 1991–1995",
-            question: "<span class=\"text-secondary\">Đại hội VIII</span> (28/6–1/7/1996) đưa ra nhận định lịch sử nào sau 10 năm Đổi mới?",
-            options: [
-                { letter: "A", text: "Đất nước đã trở thành nước công nghiệp phát triển", icon: "star" },
-                { letter: "B", text: "Mọi vấn đề kinh tế – xã hội đã được giải quyết hoàn toàn", icon: "verified" },
-                { letter: "C", text: "Đất nước vẫn chìm trong khủng hoảng như trước Đổi mới", icon: "report_problem" },
-                { letter: "D", text: "\"Nước ta đã ra khỏi khủng hoảng kinh tế – xã hội, nhưng một số mặt còn chưa vững chắc\"", icon: "flag" }
-            ],
-            answer: 3,
-            explanation: "Đại hội VIII kết luận: 'Nước ta đã ra khỏi khủng hoảng kinh tế – xã hội, nhưng một số mặt còn chưa vững chắc'. Nhiệm vụ chặng đầu chuẩn bị tiền đề CNH cơ bản hoàn thành, cho phép chuyển sang đẩy mạnh công nghiệp hóa, hiện đại hóa.",
-            citation: "Nguồn: Giáo trình VNR202, PDF tr. 141–142."
+    <!-- LECTURE CONTENT & TIMELINE SECTIONS (Always accessible) -->
+    <div id="extra-sections" class="bg-surface">
+        <!-- TIMELINE SECTION -->
+        <section id="timeline-section"
+            class="py-16 px-margin-mobile md:px-margin-desktop border-t-4 border-burgundy-deep bg-surface-container-low">
+            <div class="max-w-container-max mx-auto">
+                <div
+                    class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 border-b-2 border-surface-variant pb-4 gap-4">
+                    <div>
+                        <span class="text-label-caps font-label-caps text-secondary uppercase tracking-widest">DẤU MỐC
+                            LỊCH SỬ</span>
+                        <h2 class="text-headline-lg font-headline-lg text-primary uppercase drop-shadow">Tiến Trình Đổi
+                            Mới 1986 – 1996</h2>
+                    </div>
+                </div>
+
+                <div class="relative overflow-x-auto timeline-scroll py-6 px-4">
+                    <div class="flex items-center gap-6 min-w-max">
+                        <div onclick="showMilestoneModal('1986')"
+                            class="cursor-pointer group relative flex flex-col bg-surface-container border-2 border-primary p-5 rounded-lg shadow-[4px_4px_0_0_rgba(88,12,16,1)] hover:-translate-y-2 transition-all w-72">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-stat-value text-stat-value text-primary">1986</span>
+                                <span
+                                    class="px-2 py-0.5 bg-burgundy-deep text-primary text-xs font-bold rounded">15-18/12</span>
+                            </div>
+                            <h4 class="font-bold text-on-surface mb-1">Đại hội VI khởi xướng Đổi mới</h4>
+                            <p class="text-sm text-on-surface-variant">Khái sinh đường lối Đổi mới toàn diện, xóa bỏ cơ
+                                chế bao cấp.</p>
+                        </div>
+
+                        <div onclick="showMilestoneModal('1987')"
+                            class="cursor-pointer group relative flex flex-col bg-surface-container border-2 border-secondary p-5 rounded-lg shadow-[4px_4px_0_0_rgba(202,138,4,0.5)] hover:-translate-y-2 transition-all w-72">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-stat-value text-stat-value text-secondary">1987</span>
+                                <span class="px-2 py-0.5 bg-secondary/20 text-secondary text-xs font-bold rounded">HNTW
+                                    2 & QĐ 217</span>
+                            </div>
+                            <h4 class="font-bold text-on-surface mb-1">Chính sách "4 Giảm" & QĐ 217</h4>
+                            <p class="text-sm text-on-surface-variant">Trao quyền tự chủ hạch toán cho Doanh nghiệp Nhà
+                                nước.</p>
+                        </div>
+
+                        <div onclick="showMilestoneModal('1988')"
+                            class="cursor-pointer group relative flex flex-col bg-surface-container border-2 border-success-green p-5 rounded-lg shadow-[4px_4px_0_0_rgba(22,163,74,0.5)] hover:-translate-y-2 transition-all w-72">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-stat-value text-stat-value text-success-green">1988</span>
+                                <span
+                                    class="px-2 py-0.5 bg-success-green/20 text-success-green text-xs font-bold rounded">Khoán
+                                    10</span>
+                            </div>
+                            <h4 class="font-bold text-on-surface mb-1">Khoán 10 & Bỏ Tem Phiếu</h4>
+                            <p class="text-sm text-on-surface-variant">Nông dân nhận đất 15 năm; xóa bỏ hoàn toàn tem
+                                phiếu bao cấp.</p>
+                        </div>
+
+                        <div onclick="showMilestoneModal('1989')"
+                            class="cursor-pointer group relative flex flex-col bg-surface-container border-2 border-primary p-5 rounded-lg shadow-[4px_4px_0_0_rgba(88,12,16,1)] hover:-translate-y-2 transition-all w-72">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-stat-value text-stat-value text-primary">1989</span>
+                                <span class="px-2 py-0.5 bg-burgundy-deep text-primary text-xs font-bold rounded">Xuất
+                                    Khẩu Gạo</span>
+                            </div>
+                            <h4 class="font-bold text-on-surface mb-1">Kỳ Tích Xuất Khẩu Gạo</h4>
+                            <p class="text-sm text-on-surface-variant">Lần đầu tự túc và xuất khẩu 1.4 triệu tấn gạo.
+                                Rút quân Campuchia.</p>
+                        </div>
+
+                        <div onclick="showMilestoneModal('1991')"
+                            class="cursor-pointer group relative flex flex-col bg-surface-container border-2 border-secondary p-5 rounded-lg shadow-[4px_4px_0_0_rgba(202,138,4,0.5)] hover:-translate-y-2 transition-all w-72">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-stat-value text-stat-value text-secondary">1991</span>
+                                <span class="px-2 py-0.5 bg-secondary/20 text-secondary text-xs font-bold rounded">Đại
+                                    Hội VII</span>
+                            </div>
+                            <h4 class="font-bold text-on-surface mb-1">Cương Lĩnh 1991 & Chiến Lược 2000</h4>
+                            <p class="text-sm text-on-surface-variant">Xác định rõ mô hình kinh tế thị trường định hướng
+                                XHCN.</p>
+                        </div>
+
+                        <div onclick="showMilestoneModal('1995')"
+                            class="cursor-pointer group relative flex flex-col bg-surface-container border-2 border-secondary p-5 rounded-lg shadow-[4px_4px_0_0_rgba(202,138,4,0.5)] hover:-translate-y-2 transition-all w-72">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-stat-value text-stat-value text-secondary">1995</span>
+                                <span class="px-2 py-0.5 bg-secondary/20 text-secondary text-xs font-bold rounded">ASEAN
+                                    & Việt - Mỹ</span>
+                            </div>
+                            <h4 class="font-bold text-on-surface mb-1">Hội Nhập Quốc Tế Lịch Sử</h4>
+                            <p class="text-sm text-on-surface-variant">Gia nhập ASEAN (28/7) & Bình thường hóa quan hệ
+                                Việt - Mỹ (11/7).</p>
+                        </div>
+
+                        <div onclick="showMilestoneModal('1996')"
+                            class="cursor-pointer group relative flex flex-col bg-surface-container border-2 border-success-green p-5 rounded-lg shadow-[4px_4px_0_0_rgba(22,163,74,0.5)] hover:-translate-y-2 transition-all w-72">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-stat-value text-stat-value text-success-green">1996</span>
+                                <span
+                                    class="px-2 py-0.5 bg-success-green/20 text-success-green text-xs font-bold rounded">Đại
+                                    Hội VIII</span>
+                            </div>
+                            <h4 class="font-bold text-on-surface mb-1">Thoát Khủng Hoảng 20 Năm</h4>
+                            <p class="text-sm text-on-surface-variant">Tuyên bố chính thức ra khỏi khủng hoảng kinh tế –
+                                xã hội!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTENT SECTION (6 PARTS) -->
+        <section id="content-section"
+            class="py-16 px-margin-mobile md:px-margin-desktop bg-surface border-t-4 border-burgundy-deep">
+            <div class="max-w-container-max mx-auto">
+                <div class="text-center mb-8">
+                    <span class="text-label-caps font-label-caps text-secondary uppercase tracking-widest">NỘI DUNG GIÁO
+                        TRÌNH</span>
+                    <h2 class="text-headline-lg font-headline-lg text-primary uppercase mt-1">Nội dung 6 Phần
+                    </h2>
+                </div>
+
+                <div class="flex flex-wrap gap-2 justify-center mb-8">
+                    <button onclick="switchTab(1)" id="t-btn-1"
+                        class="px-4 py-2 rounded font-bold text-sm bg-burgundy-deep text-primary border border-primary">Phần
+                        I: Bối cảnh</button>
+                    <button onclick="switchTab(2)" id="t-btn-2"
+                        class="px-4 py-2 rounded font-bold text-sm bg-surface-container text-on-surface-variant border border-outline/20">Phần
+                        II: Đại hội VI</button>
+                    <button onclick="switchTab(3)" id="t-btn-3"
+                        class="px-4 py-2 rounded font-bold text-sm bg-surface-container text-on-surface-variant border border-outline/20">Phần
+                        III: Chính sách 1987–1990</button>
+                    <button onclick="switchTab(4)" id="t-btn-4"
+                        class="px-4 py-2 rounded font-bold text-sm bg-surface-container text-on-surface-variant border border-outline/20">Phần
+                        IV: Kết quả bước đầu</button>
+                    <button onclick="switchTab(5)" id="t-btn-5"
+                        class="px-4 py-2 rounded font-bold text-sm bg-surface-container text-on-surface-variant border border-outline/20">Phần
+                        V: Đại hội VII</button>
+                    <button onclick="switchTab(6)" id="t-btn-6"
+                        class="px-4 py-2 rounded font-bold text-sm bg-surface-container text-on-surface-variant border border-outline/20">Phần
+                        VI: Thoát khủng hoảng</button>
+                </div>
+
+                <div
+                    class="bg-surface-container border-2 border-burgundy-deep p-8 rounded-lg leading-relaxed text-on-surface">
+                    <div id="c-panel-1" class="space-y-4">
+                        <h3 class="text-headline-md font-headline-md text-secondary border-b border-outline/20 pb-2">I.
+                            BỐI CẢNH TRƯỚC ĐẠI HỘI VI: VÌ SAO VIỆT NAM PHẢI ĐỔI MỚI?</h3>
+                        <p class="text-body-lg text-on-surface-variant">Sau thống nhất 1975, Việt Nam bước vào quá trình
+                            xây dựng CNXH với xuất phát điểm rất thấp, hậu quả chiến tranh nặng nề, chịu chiến tranh
+                            biên giới và bị bao vây cấm vận. Đất nước rơi vào khủng hoảng kinh tế - xã hội kéo dài.</p>
+                        <p class="text-body-md"><strong class="text-error-red">Lạm phát phi mã:</strong> Năm 1985 khoảng
+                            300%, tăng vọt lên mức <strong>774.7% năm 1986</strong>. Nguyên nhân chủ yếu do duy trì quá
+                            lâu cơ chế tập trung quan liêu bao cấp và nóng vội trong cải tạo XHCN.</p>
+                    </div>
+
+                    <div id="c-panel-2" class="hidden space-y-4">
+                        <h3 class="text-headline-md font-headline-md text-secondary border-b border-outline/20 pb-2">II.
+                            ĐẠI HỘI VI (12/1986): BƯỚC NGOẶT KHỞI XƯỚNG ĐỔI MỚI TOÀN DIỆN</h3>
+                        <p class="text-body-lg text-on-surface-variant">Diễn ra từ 15 đến 18/12/1986 tại Hà Nội với
+                            phương châm: <em>"Nhìn thẳng vào sự thật, đánh giá đúng sự thật, nói rõ sự thật"</em>.</p>
+                        <p class="text-body-md">Đại hội xác định phát triển nền kinh tế nhiều thành phần, xóa bao cấp
+                            sang hạch toán kinh doanh, và tập trung vào <strong>3 chương trình kinh tế lớn: Lương thực –
+                                thực phẩm, Hàng tiêu dùng, Hàng xuất khẩu</strong>.</p>
+                    </div>
+
+                    <div id="c-panel-3" class="hidden space-y-4">
+                        <h3 class="text-headline-md font-headline-md text-secondary border-b border-outline/20 pb-3">
+                            III. GIAI ĐOẠN 1987–1990: BIẾN ĐƯỜNG LỐI THÀNH CHÍNH SÁCH CỤ THỂ</h3>
+                        <ul class="list-disc pl-5 space-y-2 text-body-md text-on-surface-variant">
+                            <li><strong>Chính sách "4 giảm" (04/1987):</strong> Giảm bội chi ngân sách, giảm nhịp độ
+                                tăng giá, giảm lạm phát, giảm khó khăn đời sống.</li>
+                            <li><strong>Quyết định 217-HĐBT (11/1987):</strong> Trao quyền tự chủ hạch toán kinh doanh
+                                cho Doanh nghiệp Nhà nước.</li>
+                            <li><strong>Khoán 10 (04/1988):</strong> Giao đất canh tác ổn định 15 năm cho hộ nông dân.
+                            </li>
+                            <li><strong>Bỏ Tem Phiếu (Cuối năm 1988):</strong> Xóa bỏ hoàn toàn chế độ phân phối tem
+                                phiếu bao cấp.</li>
+                            <li><strong>Luật Đầu tư nước ngoài (01/01/1988):</strong> Thu hút nguồn vốn FDI.</li>
+                        </ul>
+                    </div>
+
+                    <div id="c-panel-4" class="hidden space-y-4">
+                        <h3 class="text-headline-md font-headline-md text-secondary border-b border-outline/20 pb-3">IV.
+                            KẾT QUẢ BƯỚC ĐẦU SAU HƠN 4 NĂM ĐỔI MỚI (1986–1990)</h3>
+                        <p class="text-body-md text-on-surface-variant">Lạm phát giảm từ 774.7% (1986) xuống 67.4%
+                            (1990). Năm 1988 nhập 45 vạn tấn gạo, đến năm 1989 đã tự túc, dự trữ và xuất khẩu 1.4 triệu
+                            tấn gạo!</p>
+                    </div>
+
+                    <div id="c-panel-5" class="hidden space-y-4">
+                        <h3 class="text-headline-md font-headline-md text-secondary border-b border-outline/20 pb-3">V.
+                            ĐẠI HỘI VII (06/1991): XÁC ĐỊNH RÕ HƠN MÔ HÌNH PHÁT TRIỂN</h3>
+                        <p class="text-body-md text-on-surface-variant">Thông qua Cương lĩnh 1991 và Chiến lược phát
+                            triển KT-XH đến năm 2000 (mục tiêu gấp đôi GDP năm 2000 so với 1990). Khẳng định nền kinh tế
+                            thị trường định hướng XHCN.</p>
+                    </div>
+
+                    <div id="c-panel-6" class="hidden space-y-4">
+                        <h3 class="text-headline-md font-headline-md text-secondary border-b border-outline/20 pb-3">VI.
+                            THỂ CHẾ HÓA 1991–1995 VÀ ĐẠI HỘI VIII (1996) THOÁT KHỦNG HOẢNG</h3>
+                        <p class="text-body-md text-on-surface-variant">Thông qua Hiến pháp 1992. Đột phá đối ngoại 1995
+                            (Bình thường hóa quan hệ Việt - Mỹ 11/7, Gia nhập ASEAN 28/7). Đại hội VIII (1996) tuyên bố
+                            đất nước ra khỏi khủng hoảng kinh tế – xã hội kéo dài 20 năm!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer
+        class="bg-charcoal w-full py-8 px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-4 border-t-2 border-burgundy-deep">
+        <div class="text-label-caps font-label-caps text-secondary uppercase">A Digital History Initiative
+        </div>
+        <nav class="flex gap-6">
+            <a class="text-on-surface-variant text-label-caps font-label-caps hover:text-primary transition-colors uppercase"
+                href="#" onclick="showHomeView()">Home</a>
+            <a class="text-on-surface-variant text-label-caps font-label-caps hover:text-primary transition-colors uppercase"
+                href="#" onclick="startQuizGame()">Quiz Game</a>
+            <a class="text-on-surface-variant text-label-caps font-label-caps hover:text-primary transition-colors uppercase"
+                href="#" onclick="scrollToSection('timeline-section')">Timeline</a>
+            <a class="text-on-surface-variant text-label-caps font-label-caps hover:text-primary transition-colors uppercase"
+                href="#" onclick="scrollToSection('content-section')">Archive</a>
+        </nav>
+    </footer>
+
+    <!-- MILESTONE MODAL -->
+    <div id="milestone-modal"
+        class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div
+            class="bg-surface-container border-2 border-secondary p-6 md:p-8 rounded-lg max-w-xl w-full shadow-2xl relative">
+            <button onclick="closeMilestoneModal()"
+                class="absolute top-4 right-4 text-on-surface-variant hover:text-white text-xl font-bold">✕</button>
+            <div id="modal-year-tag"
+                class="inline-block px-3 py-1 bg-burgundy-deep text-secondary text-label-caps font-label-caps rounded mb-2">
+                1986</div>
+            <h3 id="modal-title" class="text-headline-md font-headline-md text-primary mb-3">Tên Cột Mốc</h3>
+            <div id="modal-body" class="text-body-md text-on-surface-variant leading-relaxed"></div>
+        </div>
+    </div>
+
+    <!-- SLIDE MODE MODAL -->
+    <div id="slide-modal"
+        class="hidden fixed inset-0 z-50 bg-background text-on-surface flex flex-col justify-between p-6 md:p-12">
+        <div class="flex justify-between items-center border-b border-outline/20 pb-4">
+            <div class="flex items-center gap-2">
+                <span class="text-secondary font-bold text-xl">THUYẾT TRÌNH</span>
+                <span id="slide-index-indicator"
+                    class="text-xs text-on-surface-variant bg-surface-container px-3 py-1 rounded-full">Slide 1 /
+                    6</span>
+            </div>
+            <button onclick="toggleSlideMode()"
+                class="text-primary hover:text-white text-sm font-bold flex items-center gap-1">
+                <span>Thoát Slide</span> <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+
+        <div class="max-w-4xl mx-auto w-full my-auto text-center" id="slide-content-area"></div>
+
+        <div class="flex justify-between items-center border-t border-outline/20 pt-4">
+            <button onclick="prevSlide()"
+                class="bg-surface-container border border-outline/30 px-6 py-2 rounded-lg text-sm font-bold hover:bg-surface-container-high transition">◄
+                Slide Trước</button>
+            <div class="text-xs text-on-surface-variant">Dùng phím Mũi Tên Trái/Phải để chuyển slide</div>
+            <button onclick="nextSlide()"
+                class="bg-secondary text-on-secondary px-6 py-2 rounded-lg text-sm font-bold hover:bg-gold-warm transition">Slide
+                Tiếp ►</button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT APP LOGIC -->
+    <script>
+        // -------------------------------------------------------------------
+        // 15 VNR202 TEXTBOOK QUESTIONS (PDF tr. 128-137)
+        // -------------------------------------------------------------------
+        const quizData = [
+            {
+                category: "PHẦN I: BỐI CẢNH TRƯỚC ĐỔI MỚI",
+                question: "Theo giáo trình, lạm phát của Việt Nam năm <span class=\"text-secondary\">1986</span> đạt mức khoảng bao nhiêu %?",
+                options: [
+                    { letter: "A", text: "Khoảng 300%", icon: "trending_down" },
+                    { letter: "B", text: "Khoảng 393,3%", icon: "percent" },
+                    { letter: "C", text: "Khoảng 774%", icon: "show_chart" },
+                    { letter: "D", text: "Khoảng 67,4%", icon: "bar_chart" }
+                ],
+                answer: 2,
+                explanation: "Lạm phát từ khoảng 300% năm 1985 tăng vọt lên khoảng 774% (774,7%) năm 1986 — chỉ báo trực quan nhất thể hiện mức độ nghiêm trọng của cuộc khủng hoảng kinh tế – xã hội.",
+                citation: "Nguồn: Giáo trình, PDF tr. 128."
+            },
+            {
+                category: "PHẦN I: BỐI CẢNH TRƯỚC ĐỔI MỚI",
+                question: "Trong các nguyên nhân của khủng hoảng trước Đại hội VI, giáo trình nhấn mạnh nguyên nhân <span class=\"text-secondary\">chủ quan</span> quan trọng nhất là gì?",
+                options: [
+                    { letter: "A", text: "Chiến tranh bảo vệ biên giới Tây Nam và phía Bắc", icon: "shield" },
+                    { letter: "B", text: "Bị bao vây, cấm vận trong nhiều năm", icon: "block" },
+                    { letter: "C", text: "Nguồn viện trợ nước ngoài giảm mạnh", icon: "trending_down" },
+                    { letter: "D", text: "Duy trì quá lâu cơ chế tập trung, quan liêu, bao cấp", icon: "lock" }
+                ],
+                answer: 3,
+                explanation: "Về khách quan: xuất phát điểm thấp, hậu quả chiến tranh, chiến tranh biên giới, cấm vận, viện trợ giảm. Nhưng giáo trình nhấn mạnh nguyên nhân chủ quan: sai lầm trong đánh giá tình hình, nóng vội cải tạo XHCN và đặc biệt là duy trì quá lâu cơ chế tập trung, quan liêu, bao cấp.",
+                citation: "Nguồn: Giáo trình, PDF tr. 128."
+            },
+            {
+                category: "PHẦN I: BỐI CẢNH TRƯỚC ĐỔI MỚI",
+                question: "Quá trình hình thành tư duy Đổi mới được ghi nhận qua ba mốc khảo nghiệm thực tiễn: tháng 8/1979, tháng 6/1985 và <span class=\"text-secondary\">tháng nào</span>?",
+                options: [
+                    { letter: "A", text: "Tháng 8/1986", icon: "event" },
+                    { letter: "B", text: "Tháng 12/1986", icon: "calendar_month" },
+                    { letter: "C", text: "Tháng 4/1987", icon: "today" },
+                    { letter: "D", text: "Tháng 3/1989", icon: "date_range" }
+                ],
+                answer: 0,
+                explanation: "Ba mốc thường được nhắc tới là 8/1979, 6/1985 và 8/1986. Kết luận Bộ Chính trị tháng 8/1986 về cơ cấu sản xuất, kinh tế nhiều thành phần và đổi mới cơ chế quản lý là bước chuẩn bị trực tiếp cho đường lối Đổi mới tại Đại hội VI.",
+                citation: "Nguồn: Giáo trình, PDF tr. 128–129."
+            },
+            {
+                category: "PHẦN II: ĐẠI HỘI VI (12/1986)",
+                question: "<span class=\"text-secondary\">Đại hội đại biểu toàn quốc lần thứ VI</span> của Đảng diễn ra tại đâu và trong thời gian nào?",
+                options: [
+                    { letter: "A", text: "24–27/6/1991 tại Hà Nội", icon: "event_busy" },
+                    { letter: "B", text: "15–18/12/1986 tại Hà Nội", icon: "event_available" },
+                    { letter: "C", text: "28/6–1/7/1996 tại Hà Nội", icon: "event" },
+                    { letter: "D", text: "15–18/12/1986 tại Thành phố Hồ Chí Minh", icon: "location_city" }
+                ],
+                answer: 1,
+                explanation: "Đại hội VI diễn ra tại Hà Nội từ 15 đến 18/12/1986, đúng lúc đất nước khủng hoảng KT–XH nặng nề, lương thực – hàng tiêu dùng khan hiếm, lạm phát rất cao và còn bị bao vây, cấm vận.",
+                citation: "Nguồn: Giáo trình, PDF tr. 129."
+            },
+            {
+                category: "PHẦN II: ĐẠI HỘI VI (12/1986)",
+                question: "Ba chương trình kinh tế lớn mà <span class=\"text-secondary\">Đại hội VI</span> yêu cầu tập trung nguồn lực là gì?",
+                options: [
+                    { letter: "A", text: "Công nghiệp nặng – Điện lực – Nông nghiệp", icon: "precision_manufacturing" },
+                    { letter: "B", text: "Giao thông – Giáo dục – Y tế", icon: "local_shipping" },
+                    { letter: "C", text: "Lương thực – thực phẩm, Hàng tiêu dùng, Hàng xuất khẩu", icon: "rice_bowl" },
+                    { letter: "D", text: "Dầu khí – Thủy điện – Hàng xuất khẩu", icon: "oil_barrel" }
+                ],
+                answer: 2,
+                explanation: "Trước Đổi mới, khó khăn lớn nhất là thiếu lương thực, thiếu hàng tiêu dùng và thiếu nguồn ngoại tệ. Thay vì dàn trải nguồn lực, Đại hội VI yêu cầu tập trung giải quyết những nhu cầu thiết yếu nhất qua 3 chương trình: lương thực – thực phẩm, hàng tiêu dùng, hàng xuất khẩu.",
+                citation: "Nguồn: Giáo trình, PDF tr. 129."
+            },
+            {
+                category: "PHẦN II: ĐẠI HỘI VI (12/1986)",
+                question: "Giáo trình chỉ rõ một <span class=\"text-secondary\">hạn chế</span> của Đại hội VI là gì?",
+                options: [
+                    { letter: "A", text: "Chưa tìm ra giải pháp thật hiệu quả để tháo gỡ ngay tình trạng rối ren trong phân phối và lưu thông", icon: "report_problem" },
+                    { letter: "B", text: "Chưa thừa nhận sự tồn tại của nền kinh tế nhiều thành phần", icon: "block" },
+                    { letter: "C", text: "Chưa đặt vấn đề xóa bỏ cơ chế tập trung, bao cấp", icon: "money_off" },
+                    { letter: "D", text: "Chưa quan tâm tới chính sách xã hội", icon: "diversity_3" }
+                ],
+                answer: 0,
+                explanation: "Đại hội VI là Đại hội khởi xướng đường lối đổi mới toàn diện, nhưng giáo trình chỉ rõ hạn chế: chưa tìm ra giải pháp thật hiệu quả để tháo gỡ ngay tình trạng rối ren trong phân phối và lưu thông, nên giai đoạn 1987–1990 phải tiếp tục đưa ra các chính sách cụ thể hơn.",
+                citation: "Nguồn: Giáo trình, PDF tr. 130."
+            },
+            {
+                category: "PHẦN III: CHÍNH SÁCH 1987–1990",
+                question: "Chính sách <span class=\"text-secondary\">\"bốn giảm\"</span> tại Hội nghị Trung ương 2 khóa VI (4/1987) gồm những nội dung nào?",
+                options: [
+                    { letter: "A", text: "Giảm thuế – giảm giá – giảm lương – giảm chi tiêu", icon: "savings" },
+                    { letter: "B", text: "Giảm bội chi ngân sách – giảm nhịp độ tăng giá – giảm lạm phát – giảm khó khăn về đời sống nhân dân", icon: "trending_down" },
+                    { letter: "C", text: "Giảm nhập khẩu – giảm xuất khẩu – giảm đầu tư – giảm tiêu dùng", icon: "swap_vert" },
+                    { letter: "D", text: "Giảm giá điện – giảm giá xăng – giảm giờ làm – giảm biên chế", icon: "bolt" }
+                ],
+                answer: 1,
+                explanation: "HNTW 2 (4/1987) tập trung xử lý vấn đề cấp bách của phân phối và lưu thông với chính sách 'bốn giảm'; đồng thời giải thể các trạm kiểm soát hàng hóa, thực hiện cơ chế một giá, chế độ lương thống nhất, chuyển đơn vị quốc doanh sang hạch toán kinh doanh.",
+                citation: "Nguồn: Giáo trình, PDF tr. 131."
+            },
+            {
+                category: "PHẦN III: CHÍNH SÁCH 1987–1990",
+                question: "<span class=\"text-secondary\">Quyết định 217-HĐBT</span> ngày 14/11/1987 có nội dung cốt lõi là gì?",
+                options: [
+                    { letter: "A", text: "Giải thể các trạm kiểm soát hàng hóa trên các tuyến giao thông", icon: "road" },
+                    { letter: "B", text: "Thực hiện cơ chế một giá trong lưu thông hàng hóa", icon: "price_change" },
+                    { letter: "C", text: "Trao quyền tự chủ cho doanh nghiệp quốc doanh, chuyển sang hạch toán kinh doanh", icon: "store" },
+                    { letter: "D", text: "Khoán sản phẩm cuối cùng đến nhóm hộ và hộ xã viên", icon: "agriculture" }
+                ],
+                answer: 2,
+                explanation: "QĐ 217-HĐBT trao quyền tự chủ cho các doanh nghiệp quốc doanh: cơ chế quản lý thay đổi theo hướng giảm bao cấp, doanh nghiệp có nhiều trách nhiệm và chủ động hơn trong sản xuất, kinh doanh theo hạch toán.",
+                citation: "Nguồn: Giáo trình, PDF tr. 131."
+            },
+            {
+                category: "PHẦN III: CHÍNH SÁCH 1987–1990",
+                question: "Theo <span class=\"text-secondary\">Khoán 10</span> (Nghị quyết 10 của Bộ Chính trị, 4/1988), người nông dân được canh tác trên diện tích ổn định trong bao nhiêu năm và bảo đảm thu nhập từ bao nhiêu trở lên?",
+                options: [
+                    { letter: "A", text: "10 năm – từ 30% sản lượng khoán", icon: "schedule" },
+                    { letter: "B", text: "15 năm – từ 40% sản lượng khoán trở lên", icon: "agriculture" },
+                    { letter: "C", text: "20 năm – từ 50% sản lượng khoán", icon: "landscape" },
+                    { letter: "D", text: "25 năm – từ 60% sản lượng khoán", icon: "workspace_premium" }
+                ],
+                answer: 1,
+                explanation: "Khoán 10: khoán sản phẩm cuối cùng đến nhóm hộ và hộ xã viên; người nông dân được nhận khoán, canh tác trên diện tích ổn định trong 15 năm, bảo đảm thu nhập từ 40% sản lượng khoán trở lên — tăng quyền chủ động và động lực sản xuất.",
+                citation: "Nguồn: Giáo trình, PDF tr. 131."
+            },
+            {
+                category: "PHẦN III: CHÍNH SÁCH 1987–1990",
+                question: "Chế độ phân phối theo <span class=\"text-secondary\">tem phiếu</span> — biểu hiện điển hình của cơ chế phân phối bao cấp — được xóa bỏ vào thời điểm nào?",
+                options: [
+                    { letter: "A", text: "Cuối năm 1986", icon: "event" },
+                    { letter: "B", text: "Cuối năm 1987", icon: "event_repeat" },
+                    { letter: "C", text: "Cuối năm 1989", icon: "today" },
+                    { letter: "D", text: "Cuối năm 1988", icon: "confirmation_number" }
+                ],
+                answer: 3,
+                explanation: "Cuối năm 1988 tem phiếu được xóa bỏ. Sau đó hàng tiêu dùng đa dạng hơn, lưu thông tương đối thuận lợi — nền kinh tế chuyển dần từ phân phối hành chính sang lưu thông hàng hóa theo cơ chế mới.",
+                citation: "Nguồn: Giáo trình, PDF tr. 132."
+            },
+            {
+                category: "PHẦN IV: KẾT QUẢ BƯỚC ĐẦU",
+                question: "Chuyển biến về <span class=\"text-secondary\">lương thực</span> từ năm 1988 sang năm 1989 được giáo trình ghi nhận như thế nào?",
+                options: [
+                    { letter: "A", text: "1988 còn nhập hơn 45 vạn tấn gạo; đến 1989 đáp ứng được nhu cầu, có dự trữ và xuất khẩu", icon: "eco" },
+                    { letter: "B", text: "1988 đã xuất khẩu gạo; 1989 xuất khẩu gấp đôi", icon: "rocket_launch" },
+                    { letter: "C", text: "Cả 1988 và 1989 đều phải nhập hơn 45 vạn tấn gạo", icon: "warning" },
+                    { letter: "D", text: "1988 thiếu gạo nghiêm trọng; 1989 mới đủ ăn, chưa có dự trữ", icon: "rice_bowl" }
+                ],
+                answer: 0,
+                explanation: "Giáo trình ghi nhận năm 1988 Việt Nam vẫn phải nhập hơn 45 vạn tấn gạo; đến năm 1989 đã đáp ứng được nhu cầu, có dự trữ và xuất khẩu — một trong những chuyển biến dễ thấy nhất sau đổi mới nông nghiệp.",
+                citation: "Nguồn: Giáo trình, PDF tr. 132."
+            },
+            {
+                category: "PHẦN V: ĐẠI HỘI VII (06/1991)",
+                question: "<span class=\"text-secondary\">Đại hội VII</span> (6/1991) có điểm mới đặc biệt là thông qua hai văn kiện nào?",
+                options: [
+                    { letter: "A", text: "Hiến pháp 1992 và Luật Đất đai 1993", icon: "menu_book" },
+                    { letter: "B", text: "Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên CNXH (1991) và Chiến lược ổn định và phát triển KT-XH đến năm 2000", icon: "history_edu" },
+                    { letter: "C", text: "Luật Doanh nghiệp 1990 và Luật Đầu tư nước ngoài", icon: "gavel" },
+                    { letter: "D", text: "Kế hoạch 5 năm 1986–1990 và Cương lĩnh 1991", icon: "date_range" }
+                ],
+                answer: 1,
+                explanation: "Đại hội VII (24–27/6/1991) thông qua Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên CNXH năm 1991 và Chiến lược ổn định và phát triển kinh tế – xã hội đến năm 2000.",
+                citation: "Nguồn: Giáo trình, PDF tr. 135."
+            },
+            {
+                category: "PHẦN V: ĐẠI HỘI VII (06/1991)",
+                question: "Về tăng trưởng, <span class=\"text-secondary\">Chiến lược đến năm 2000</span> (Đại hội VII) đặt mục tiêu GDP năm 2000 như thế nào?",
+                options: [
+                    { letter: "A", text: "Tăng gấp đôi GDP năm 1990", icon: "trending_up" },
+                    { letter: "B", text: "Tăng gấp 5 lần GDP năm 1990", icon: "rocket_launch" },
+                    { letter: "C", text: "Giữ nguyên quy mô GDP năm 1990", icon: "horizontal_rule" },
+                    { letter: "D", text: "Tăng gấp 10 lần GDP năm 1990", icon: "attach_money" }
+                ],
+                answer: 0,
+                explanation: "Chiến lược đặt mục tiêu đưa đất nước ra khỏi khủng hoảng, ổn định KT-XH, vượt qua tình trạng nước nghèo và kém phát triển, với GDP năm 2000 tăng gấp đôi năm 1990.",
+                citation: "Nguồn: Giáo trình, PDF tr. 136."
+            },
+            {
+                category: "PHẦN VI: THỂ CHẾ HÓA 1991–1995",
+                question: "Tháng 4/1992, Quốc hội thông qua văn kiện nào, được xem là dấu mốc <span class=\"text-secondary\">thể chế hóa</span> đường lối Đổi mới sau Đại hội VII?",
+                options: [
+                    { letter: "A", text: "Cương lĩnh xây dựng đất nước 1991", icon: "history_edu" },
+                    { letter: "B", text: "Luật Đầu tư nước ngoài", icon: "handshake" },
+                    { letter: "C", text: "Hiến pháp năm 1992", icon: "balance" },
+                    { letter: "D", text: "Quyết định 217-HĐBT", icon: "assignment" }
+                ],
+                answer: 2,
+                explanation: "Tháng 4/1992, Quốc hội thông qua Hiến pháp năm 1992 — dấu mốc quan trọng trong quá trình tiếp tục thực hiện đường lối Đổi mới sau Đại hội VII.",
+                citation: "Nguồn: Giáo trình, PDF tr. 137."
+            },
+            {
+                category: "PHẦN VI: THỂ CHẾ HÓA 1991–1995",
+                question: "<span class=\"text-secondary\">Đại hội VIII</span> (28/6–1/7/1996) đưa ra nhận định lịch sử nào sau 10 năm Đổi mới?",
+                options: [
+                    { letter: "A", text: "Đất nước đã trở thành nước công nghiệp phát triển", icon: "star" },
+                    { letter: "B", text: "Mọi vấn đề kinh tế – xã hội đã được giải quyết hoàn toàn", icon: "verified" },
+                    { letter: "C", text: "Đất nước vẫn chìm trong khủng hoảng như trước Đổi mới", icon: "report_problem" },
+                    { letter: "D", text: "\"Nước ta đã ra khỏi khủng hoảng kinh tế – xã hội, nhưng một số mặt còn chưa vững chắc\"", icon: "flag" }
+                ],
+                answer: 3,
+                explanation: "Đại hội VIII kết luận: 'Nước ta đã ra khỏi khủng hoảng kinh tế – xã hội, nhưng một số mặt còn chưa vững chắc'. Nhiệm vụ chặng đầu chuẩn bị tiền đề CNH cơ bản hoàn thành, cho phép chuyển sang đẩy mạnh công nghiệp hóa, hiện đại hóa.",
+                citation: "Nguồn: Giáo trình, PDF tr. 141–142."
+            }
+        ];
+
+        let currentQIdx = 0;
+        let score = 0;
+        let answered = false;
+        let isPaused = false;
+
+        // Smooth rAF-based timer
+        const QUESTION_TIME_MS = 15000;
+        let timerRafId = null;
+        let remainingMs = QUESTION_TIME_MS;
+        let deadlineMs = 0;
+        let lastShownSec = -1;
+
+        // -------------------------------------------------------------------
+        // ENGINE & NAVIGATION
+        // -------------------------------------------------------------------
+        function showHomeView() {
+            cancelTimerLoop();
+            resetPauseState();
+            document.getElementById('home-view').classList.remove('hidden');
+            document.getElementById('quiz-view').classList.add('hidden');
+            document.getElementById('extra-sections').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-    ];
 
-    let currentQIdx = 0;
-    let score = 0;
-    let answered = false;
-    let isPaused = false;
+        function startQuizGame() {
+            currentQIdx = 0;
+            score = 0;
+            answered = false;
 
-    // Smooth rAF-based timer
-    const QUESTION_TIME_MS = 15000;
-    let timerRafId = null;
-    let remainingMs = QUESTION_TIME_MS;
-    let deadlineMs = 0;
-    let lastShownSec = -1;
+            document.getElementById('home-view').classList.add('hidden');
+            document.getElementById('extra-sections').classList.add('hidden');
+            document.getElementById('quiz-view').classList.remove('hidden');
+            document.getElementById('quiz-final-result').classList.add('hidden');
+            document.getElementById('answers-grid').classList.remove('hidden');
 
-    // -------------------------------------------------------------------
-    // ENGINE & NAVIGATION
-    // -------------------------------------------------------------------
-    function showHomeView() {
-        cancelTimerLoop();
-        resetPauseState();
-        document.getElementById('home-view').classList.remove('hidden');
-        document.getElementById('quiz-view').classList.add('hidden');
-        document.getElementById('extra-sections').classList.remove('hidden');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+            renderCurrentQuestion();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
 
-    function startQuizGame() {
-        currentQIdx = 0;
-        score = 0;
-        answered = false;
+        function renderCurrentQuestion() {
+            answered = false;
+            cancelTimerLoop();
+            resetPauseState();
+            setPauseButtonDisabled(false);
 
-        document.getElementById('home-view').classList.add('hidden');
-        document.getElementById('extra-sections').classList.add('hidden');
-        document.getElementById('quiz-view').classList.remove('hidden');
-        document.getElementById('quiz-final-result').classList.add('hidden');
-        document.getElementById('answers-grid').classList.remove('hidden');
+            const q = quizData[currentQIdx];
+            const numStr = (currentQIdx + 1 < 10 ? '0' : '') + (currentQIdx + 1);
 
-        renderCurrentQuestion();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+            document.getElementById('header-question-counter').innerText = `Q ${numStr}/15`;
+            document.getElementById('quiz-current-num').innerText = numStr;
+            document.getElementById('question-category-tag').innerText = q.category;
+            document.getElementById('quiz-question-title').innerHTML = q.question;
 
-    function renderCurrentQuestion() {
-        answered = false;
-        cancelTimerLoop();
-        resetPauseState();
-        setPauseButtonDisabled(false);
-        
-        const q = quizData[currentQIdx];
-        const numStr = (currentQIdx + 1 < 10 ? '0' : '') + (currentQIdx + 1);
+            document.getElementById('quiz-explanation-card').classList.add('hidden');
 
-        document.getElementById('header-question-counter').innerText = `Q ${numStr}/15`;
-        document.getElementById('quiz-current-num').innerText = numStr;
-        document.getElementById('question-category-tag').innerText = q.category;
-        document.getElementById('quiz-question-title').innerHTML = q.question;
+            // Render Answer Options
+            const grid = document.getElementById('answers-grid');
+            grid.innerHTML = '';
 
-        document.getElementById('quiz-explanation-card').classList.add('hidden');
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = 'group flex flex-col md:flex-row items-center md:items-start text-left gap-4 p-6 bg-surface-container rounded-lg border-2 border-outline-variant hover:border-gold-warm hover:scale-[1.02] hover:bg-surface-variant transition-all duration-200 shadow-[0_4px_0_0_rgba(17,24,39,1)] hover:shadow-[0_6px_0_0_rgba(202,138,4,0.5)] cursor-pointer';
+                btn.id = `opt-card-${idx}`;
+                btn.onclick = () => handleSelectOption(idx);
 
-        // Render Answer Options
-        const grid = document.getElementById('answers-grid');
-        grid.innerHTML = '';
-
-        q.options.forEach((opt, idx) => {
-            const btn = document.createElement('button');
-            btn.className = 'group flex flex-col md:flex-row items-center md:items-start text-left gap-4 p-6 bg-surface-container rounded-lg border-2 border-outline-variant hover:border-gold-warm hover:scale-[1.02] hover:bg-surface-variant transition-all duration-200 shadow-[0_4px_0_0_rgba(17,24,39,1)] hover:shadow-[0_6px_0_0_rgba(202,138,4,0.5)] cursor-pointer';
-            btn.id = `opt-card-${idx}`;
-            btn.onclick = () => handleSelectOption(idx);
-
-            btn.innerHTML = `
+                btn.innerHTML = `
                 <div class="flex-shrink-0 w-12 h-12 rounded-full bg-surface-variant flex items-center justify-center group-hover:bg-secondary-container transition-colors" id="opt-badge-${idx}">
                     <span class="text-stat-value font-stat-value text-primary group-hover:text-charcoal" id="opt-letter-${idx}">${opt.letter}</span>
                 </div>
                 <p class="text-body-lg font-body-lg text-on-surface flex-grow" id="opt-text-${idx}">${opt.text}</p>
             `;
-            grid.appendChild(btn);
-        });
+                grid.appendChild(btn);
+            });
 
-        // Start 15s Countdown Timer
-        startQuestionTimer();
-    }
-
-    function startQuestionTimer() {
-        remainingMs = QUESTION_TIME_MS;
-        startTimerLoop();
-    }
-
-    function startTimerLoop() {
-        cancelTimerLoop();
-        deadlineMs = performance.now() + remainingMs;
-        lastShownSec = -1;
-
-        const tick = () => {
-            remainingMs = Math.max(0, deadlineMs - performance.now());
-            updateTimerDisplay();
-
-            if (remainingMs <= 0) {
-                timerRafId = null;
-                if (!answered) handleTimeOut();
-                return;
-            }
-            timerRafId = requestAnimationFrame(tick);
-        };
-        timerRafId = requestAnimationFrame(tick);
-    }
-
-    function cancelTimerLoop() {
-        if (timerRafId !== null) {
-            cancelAnimationFrame(timerRafId);
-            timerRafId = null;
+            // Start 15s Countdown Timer
+            startQuestionTimer();
         }
-    }
 
-    function pauseTimerLoop() {
-        if (timerRafId !== null) {
+        function startQuestionTimer() {
+            remainingMs = QUESTION_TIME_MS;
+            startTimerLoop();
+        }
+
+        function startTimerLoop() {
             cancelTimerLoop();
-            remainingMs = Math.max(0, deadlineMs - performance.now());
-            updateTimerDisplay();
-        }
-    }
+            deadlineMs = performance.now() + remainingMs;
+            lastShownSec = -1;
 
-    // -------------------------------------------------------------------
-    // PAUSE / RESUME
-    // -------------------------------------------------------------------
-    function togglePause() {
-        const quizHidden = document.getElementById('quiz-view').classList.contains('hidden');
-        if (quizHidden || answered) return;
+            const tick = () => {
+                remainingMs = Math.max(0, deadlineMs - performance.now());
+                updateTimerDisplay();
 
-        isPaused = !isPaused;
-
-        if (isPaused) {
-            pauseTimerLoop();
-        } else {
-            startTimerLoop(); // resume with remaining time
-        }
-        setPauseIcon(isPaused);
-    }
-
-    function setPauseIcon(paused) {
-        document.getElementById('pause-icon').innerText = paused ? 'play_circle' : 'pause_circle';
-    }
-
-    function resetPauseState() {
-        isPaused = false;
-        setPauseIcon(false);
-    }
-
-    function setPauseButtonDisabled(disabled) {
-        document.getElementById('btn-pause-quiz').disabled = disabled;
-    }
-
-    function updateTimerDisplay() {
-        const totalSec = Math.ceil(remainingMs / 1000);
-        if (totalSec !== lastShownSec) {
-            lastShownSec = totalSec;
-            const timeStr = `00:${totalSec < 10 ? '0' : ''}${totalSec}`;
-            document.getElementById('header-timer-text').innerText = timeStr;
-            document.getElementById('quiz-timer-val').innerText = timeStr;
+                if (remainingMs <= 0) {
+                    timerRafId = null;
+                    if (!answered) handleTimeOut();
+                    return;
+                }
+                timerRafId = requestAnimationFrame(tick);
+            };
+            timerRafId = requestAnimationFrame(tick);
         }
 
-        const percent = (remainingMs / QUESTION_TIME_MS) * 100;
-        document.getElementById('quiz-timer-bar').style.width = `${percent}%`;
-        document.getElementById('quiz-timer-bg').style.width = `${100 - percent}%`;
-    }
-
-    function handleSelectOption(selectedIdx) {
-        if (answered) return;
-        answered = true;
-        cancelTimerLoop();
-        setPauseButtonDisabled(true);
-
-        const q = quizData[currentQIdx];
-        const isCorrect = (selectedIdx === q.answer);
-
-        if (isCorrect) score += 100;
-
-        // Apply state styles matching prompt design mockup
-        q.options.forEach((opt, idx) => {
-            const btn = document.getElementById(`opt-card-${idx}`);
-            btn.disabled = true;
-            btn.classList.remove('hover:scale-[1.02]', 'hover:border-gold-warm', 'hover:bg-surface-variant');
-
-            if (idx === q.answer) {
-                // Correct/Selected State mockup from prompt: bg-primary-container border-2 border-secondary scale-[1.02]
-                btn.className = 'group flex flex-col md:flex-row items-center md:items-start text-left gap-4 p-6 bg-primary-container rounded-lg border-2 border-secondary scale-[1.02] shadow-[0_6px_0_0_rgba(88,12,16,1)] transition-all duration-200 relative overflow-hidden';
-                document.getElementById(`opt-badge-${idx}`).className = 'flex-shrink-0 w-12 h-12 rounded-full bg-secondary flex items-center justify-center relative z-10';
-                document.getElementById(`opt-letter-${idx}`).className = 'text-stat-value font-stat-value text-charcoal';
-                document.getElementById(`opt-text-${idx}`).className = 'text-body-lg font-body-lg text-white font-bold';
-            } else if (idx === selectedIdx && !isCorrect) {
-                // Incorrect State: bg-error-container border-2 border-error-red
-                btn.className = 'group flex flex-col md:flex-row items-center md:items-start text-left gap-4 p-6 bg-error-container/60 rounded-lg border-2 border-error-red shadow-[0_4px_0_0_rgba(147,0,10,1)] transition-all duration-200';
-                document.getElementById(`opt-badge-${idx}`).className = 'flex-shrink-0 w-12 h-12 rounded-full bg-error-red flex items-center justify-center';
-                document.getElementById(`opt-letter-${idx}`).className = 'text-stat-value font-stat-value text-white';
-                document.getElementById(`opt-text-${idx}`).className = 'text-body-lg font-body-lg text-error-red font-bold';
-            } else {
-                btn.classList.add('opacity-40');
+        function cancelTimerLoop() {
+            if (timerRafId !== null) {
+                cancelAnimationFrame(timerRafId);
+                timerRafId = null;
             }
-        });
+        }
 
-        showExplanation(isCorrect);
-    }
-
-    function handleTimeOut() {
-        answered = true;
-        setPauseButtonDisabled(true);
-        const q = quizData[currentQIdx];
-
-        q.options.forEach((opt, idx) => {
-            const btn = document.getElementById(`opt-card-${idx}`);
-            btn.disabled = true;
-            if (idx === q.answer) {
-                btn.className = 'group flex flex-col md:flex-row items-center md:items-start text-left gap-4 p-6 bg-primary-container rounded-lg border-2 border-secondary scale-[1.02] shadow-[0_6px_0_0_rgba(88,12,16,1)]';
-            } else {
-                btn.classList.add('opacity-40');
+        function pauseTimerLoop() {
+            if (timerRafId !== null) {
+                cancelTimerLoop();
+                remainingMs = Math.max(0, deadlineMs - performance.now());
+                updateTimerDisplay();
             }
-        });
-
-        showExplanation(false, true);
-    }
-
-    function showExplanation(isCorrect, isTimeout = false) {
-        const q = quizData[currentQIdx];
-        const expCard = document.getElementById('quiz-explanation-card');
-        const expIcon = document.getElementById('exp-icon');
-        const expTitle = document.getElementById('exp-status-title');
-        const expBody = document.getElementById('exp-body-text');
-        const expCite = document.getElementById('exp-citation-text');
-
-        expCard.classList.remove('hidden');
-
-        if (isCorrect) {
-            expCard.className = 'bg-surface-container border-l-4 border-success-green p-4 rounded-lg shadow-md';
-            expIcon.className = 'material-symbols-outlined text-2xl flex-shrink-0 text-success-green';
-            expIcon.innerText = 'check_circle';
-            expTitle.className = 'font-bold text-sm uppercase tracking-wide text-success-green';
-            expTitle.innerText = 'Chính xác!';
-        } else if (isTimeout) {
-            expCard.className = 'bg-surface-container border-l-4 border-warning-orange p-4 rounded-lg shadow-md';
-            expIcon.className = 'material-symbols-outlined text-2xl flex-shrink-0 text-warning-orange';
-            expIcon.innerText = 'timer_off';
-            expTitle.className = 'font-bold text-sm uppercase tracking-wide text-warning-orange';
-            expTitle.innerText = 'Hết giờ rồi!';
-        } else {
-            expCard.className = 'bg-surface-container border-l-4 border-error-red p-4 rounded-lg shadow-md';
-            expIcon.className = 'material-symbols-outlined text-2xl flex-shrink-0 text-error-red';
-            expIcon.innerText = 'cancel';
-            expTitle.className = 'font-bold text-sm uppercase tracking-wide text-error-red';
-            expTitle.innerText = 'Chưa chính xác!';
         }
 
-        expBody.innerText = q.explanation;
-        expCite.innerText = q.citation;
-    }
+        // -------------------------------------------------------------------
+        // PAUSE / RESUME
+        // -------------------------------------------------------------------
+        function togglePause() {
+            const quizHidden = document.getElementById('quiz-view').classList.contains('hidden');
+            if (quizHidden || answered) return;
 
-    function nextQuestion() {
-        currentQIdx++;
-        if (currentQIdx < quizData.length) {
-            renderCurrentQuestion();
-        } else {
-            finishQuizGame();
+            isPaused = !isPaused;
+
+            if (isPaused) {
+                pauseTimerLoop();
+            } else {
+                startTimerLoop(); // resume with remaining time
+            }
+            setPauseIcon(isPaused);
         }
-    }
 
-    function finishQuizGame() {
-        cancelTimerLoop();
-        resetPauseState();
-        document.getElementById('answers-grid').classList.add('hidden');
-        document.getElementById('quiz-explanation-card').classList.add('hidden');
-        document.getElementById('quiz-final-result').classList.remove('hidden');
-
-        const accuracy = Math.round((score / (quizData.length * 100)) * 100);
-        document.getElementById('final-score-text').innerText = score;
-        document.getElementById('final-accuracy-text').innerText = `${accuracy}%`;
-
-        let rank = "Nhà Nghiên Cứu Lịch Sử 📖";
-        if (accuracy >= 90) rank = "Chuyên Gia Đổi Mới Xuất Sắc 🎖️";
-        else if (accuracy >= 70) rank = "Lãnh Đạo Kế Hoạch Giỏi 🌟";
-        else if (accuracy >= 50) rank = "Học Viên VNR202 Chăm Chỉ 📚";
-
-        document.getElementById('final-rank-title').innerText = `Danh hiệu: ${rank}`;
-    }
-
-    // -------------------------------------------------------------------
-    // AUXILIARY CONTROLS
-    // -------------------------------------------------------------------
-    function switchTab(num) {
-        for (let i = 1; i <= 6; i++) {
-            document.getElementById(`c-panel-${i}`).classList.add('hidden');
-            document.getElementById(`t-btn-${i}`).className = 'px-4 py-2 rounded font-bold text-sm bg-surface-container text-on-surface-variant border border-outline/20';
+        function setPauseIcon(paused) {
+            document.getElementById('pause-icon').innerText = paused ? 'play_circle' : 'pause_circle';
         }
-        document.getElementById(`c-panel-${num}`).classList.remove('hidden');
-        document.getElementById(`t-btn-${num}`).className = 'px-4 py-2 rounded font-bold text-sm bg-burgundy-deep text-primary border border-primary';
-    }
 
-    const milestoneDetails = {
-        '1986': { title: "Đại hội VI khởi xướng đường lối Đổi mới toàn diện", body: "Khởi xướng đường lối Đổi mới toàn diện, xóa bỏ bao cấp, thực hiện 3 chương trình kinh tế lớn." },
-        '1987': { title: "Chính sách 4 Giảm & Quyết định 217-HĐBT", body: "Giải quyết phân phối lưu thông, trao quyền tự chủ hạch toán cho Doanh nghiệp Nhà nước." },
-        '1988': { title: "Đột phá Khoán 10 & Xóa Bỏ Tem Phiếu", body: "Nông dân nhận đất 15 năm; xóa bỏ hoàn toàn tem phiếu bao cấp cuối năm 1988." },
-        '1989': { title: "Kỳ tích Xuất khẩu Gạo & HNTW 6", body: "Lần đầu tự túc và xuất khẩu 1.4 triệu tấn gạo. Rút quân tình nguyện khỏi Campuchia." },
-        '1991': { title: "Đại hội VII - Cương lĩnh 1991 & Chiến lược 2000", body: "Xác định rõ mô hình kinh tế thị trường định hướng XHCN, đặt mục tiêu gấp đôi GDP." },
-        '1995': { title: "Bước ngoặt Ngoại giao Lịch sử", body: "Bình thường hóa quan hệ Việt - Mỹ (11/7) & Gia nhập ASEAN (28/7)." },
-        '1996': { title: "Đại hội VIII - Thoát khỏi khủng hoảng 20 năm", body: "Chính thức tuyên bố ra khỏi cuộc khủng hoảng kinh tế – xã hội kéo dài 20 năm!" }
-    };
-
-    function showMilestoneModal(yr) {
-        const d = milestoneDetails[yr];
-        if (!d) return;
-        document.getElementById('modal-year-tag').innerText = `NĂM ${yr}`;
-        document.getElementById('modal-title').innerText = d.title;
-        document.getElementById('modal-body').innerText = d.body;
-        document.getElementById('milestone-modal').classList.remove('hidden');
-    }
-
-    function closeMilestoneModal() {
-        document.getElementById('milestone-modal').classList.add('hidden');
-    }
-
-    const slideData = [
-        { title: "I. BỐI CẢNH TRƯỚC ĐỔI MỚI (1986)", content: "Khủng hoảng KT-XH nghiêm trọng. Lạm phát phi mã 774.7% năm 1986. Duy trì quá lâu cơ chế bao cấp." },
-        { title: "II. ĐẠI HỘI VI (12/1986)", content: "Phương châm: 'Nhìn thẳng vào sự thật'. Thừa nhận nền kinh tế nhiều thành phần và 3 chương trình kinh tế lớn." },
-        { title: "III. CHÍNH SÁCH 1987–1990", content: "Chính sách 4 Giảm, Quyết định 217, Khoán 10 (04/1988), Xóa bỏ tem phiếu cuối 1988." },
-        { title: "IV. KẾT QUẢ BƯỚC ĐẦU 1986–1990", content: "Lạm phát giảm từ 774.7% xuống 67.4%. Từ nhập gạo vươn lên xuất khẩu 1.4 triệu tấn gạo năm 1989." },
-        { title: "V. ĐẠI HỘI VII & CƯƠNG LĨNH 1991", content: "Cương lĩnh 1991 và Chiến lược 2000. Kinh tế thị trường định hướng XHCN, Hiến pháp 1992." },
-        { title: "VI. THOÁT KHỦNG HOẢNG (1995–1996)", content: "Ngoại giao 1995 (ASEAN, Hoa Kỳ). Đại hội VIII (1996) tuyên bố chính thức thoát khỏi khủng hoảng 20 năm!" }
-    ];
-
-    let currentSlideIdx = 0;
-
-    function toggleSlideMode() {
-        const modal = document.getElementById('slide-modal');
-        modal.classList.toggle('hidden');
-        if (!modal.classList.contains('hidden')) {
-            currentSlideIdx = 0;
-            renderSlide();
+        function resetPauseState() {
+            isPaused = false;
+            setPauseIcon(false);
         }
-    }
 
-    function renderSlide() {
-        const s = slideData[currentSlideIdx];
-        document.getElementById('slide-index-indicator').innerText = `Slide ${currentSlideIdx + 1} / ${slideData.length}`;
-        document.getElementById('slide-content-area').innerHTML = `
+        function setPauseButtonDisabled(disabled) {
+            document.getElementById('btn-pause-quiz').disabled = disabled;
+        }
+
+        function updateTimerDisplay() {
+            const totalSec = Math.ceil(remainingMs / 1000);
+            if (totalSec !== lastShownSec) {
+                lastShownSec = totalSec;
+                const timeStr = `00:${totalSec < 10 ? '0' : ''}${totalSec}`;
+                document.getElementById('header-timer-text').innerText = timeStr;
+                document.getElementById('quiz-timer-val').innerText = timeStr;
+            }
+
+            const percent = (remainingMs / QUESTION_TIME_MS) * 100;
+            document.getElementById('quiz-timer-bar').style.width = `${percent}%`;
+            document.getElementById('quiz-timer-bg').style.width = `${100 - percent}%`;
+        }
+
+        function handleSelectOption(selectedIdx) {
+            if (answered) return;
+            answered = true;
+            cancelTimerLoop();
+            setPauseButtonDisabled(true);
+
+            const q = quizData[currentQIdx];
+            const isCorrect = (selectedIdx === q.answer);
+
+            if (isCorrect) score += 100;
+
+            // Apply state styles matching prompt design mockup
+            q.options.forEach((opt, idx) => {
+                const btn = document.getElementById(`opt-card-${idx}`);
+                btn.disabled = true;
+                btn.classList.remove('hover:scale-[1.02]', 'hover:border-gold-warm', 'hover:bg-surface-variant');
+
+                if (idx === q.answer) {
+                    // Correct/Selected State mockup from prompt: bg-primary-container border-2 border-secondary scale-[1.02]
+                    btn.className = 'group flex flex-col md:flex-row items-center md:items-start text-left gap-4 p-6 bg-primary-container rounded-lg border-2 border-secondary scale-[1.02] shadow-[0_6px_0_0_rgba(88,12,16,1)] transition-all duration-200 relative overflow-hidden';
+                    document.getElementById(`opt-badge-${idx}`).className = 'flex-shrink-0 w-12 h-12 rounded-full bg-secondary flex items-center justify-center relative z-10';
+                    document.getElementById(`opt-letter-${idx}`).className = 'text-stat-value font-stat-value text-charcoal';
+                    document.getElementById(`opt-text-${idx}`).className = 'text-body-lg font-body-lg text-white font-bold';
+                } else if (idx === selectedIdx && !isCorrect) {
+                    // Incorrect State: bg-error-container border-2 border-error-red
+                    btn.className = 'group flex flex-col md:flex-row items-center md:items-start text-left gap-4 p-6 bg-error-container/60 rounded-lg border-2 border-error-red shadow-[0_4px_0_0_rgba(147,0,10,1)] transition-all duration-200';
+                    document.getElementById(`opt-badge-${idx}`).className = 'flex-shrink-0 w-12 h-12 rounded-full bg-error-red flex items-center justify-center';
+                    document.getElementById(`opt-letter-${idx}`).className = 'text-stat-value font-stat-value text-white';
+                    document.getElementById(`opt-text-${idx}`).className = 'text-body-lg font-body-lg text-error-red font-bold';
+                } else {
+                    btn.classList.add('opacity-40');
+                }
+            });
+
+            showExplanation(isCorrect);
+        }
+
+        function handleTimeOut() {
+            answered = true;
+            setPauseButtonDisabled(true);
+            const q = quizData[currentQIdx];
+
+            q.options.forEach((opt, idx) => {
+                const btn = document.getElementById(`opt-card-${idx}`);
+                btn.disabled = true;
+                if (idx === q.answer) {
+                    btn.className = 'group flex flex-col md:flex-row items-center md:items-start text-left gap-4 p-6 bg-primary-container rounded-lg border-2 border-secondary scale-[1.02] shadow-[0_6px_0_0_rgba(88,12,16,1)]';
+                } else {
+                    btn.classList.add('opacity-40');
+                }
+            });
+
+            showExplanation(false, true);
+        }
+
+        function showExplanation(isCorrect, isTimeout = false) {
+            const q = quizData[currentQIdx];
+            const expCard = document.getElementById('quiz-explanation-card');
+            const expIcon = document.getElementById('exp-icon');
+            const expTitle = document.getElementById('exp-status-title');
+            const expBody = document.getElementById('exp-body-text');
+            const expCite = document.getElementById('exp-citation-text');
+
+            expCard.classList.remove('hidden');
+
+            if (isCorrect) {
+                expCard.className = 'bg-surface-container border-l-4 border-success-green p-4 rounded-lg shadow-md';
+                expIcon.className = 'material-symbols-outlined text-2xl flex-shrink-0 text-success-green';
+                expIcon.innerText = 'check_circle';
+                expTitle.className = 'font-bold text-sm uppercase tracking-wide text-success-green';
+                expTitle.innerText = 'Chính xác!';
+            } else if (isTimeout) {
+                expCard.className = 'bg-surface-container border-l-4 border-warning-orange p-4 rounded-lg shadow-md';
+                expIcon.className = 'material-symbols-outlined text-2xl flex-shrink-0 text-warning-orange';
+                expIcon.innerText = 'timer_off';
+                expTitle.className = 'font-bold text-sm uppercase tracking-wide text-warning-orange';
+                expTitle.innerText = 'Hết giờ rồi!';
+            } else {
+                expCard.className = 'bg-surface-container border-l-4 border-error-red p-4 rounded-lg shadow-md';
+                expIcon.className = 'material-symbols-outlined text-2xl flex-shrink-0 text-error-red';
+                expIcon.innerText = 'cancel';
+                expTitle.className = 'font-bold text-sm uppercase tracking-wide text-error-red';
+                expTitle.innerText = 'Chưa chính xác!';
+            }
+
+            expBody.innerText = q.explanation;
+            expCite.innerText = q.citation;
+        }
+
+        function nextQuestion() {
+            currentQIdx++;
+            if (currentQIdx < quizData.length) {
+                renderCurrentQuestion();
+            } else {
+                finishQuizGame();
+            }
+        }
+
+        function finishQuizGame() {
+            cancelTimerLoop();
+            resetPauseState();
+            document.getElementById('answers-grid').classList.add('hidden');
+            document.getElementById('quiz-explanation-card').classList.add('hidden');
+            document.getElementById('quiz-final-result').classList.remove('hidden');
+
+            const accuracy = Math.round((score / (quizData.length * 100)) * 100);
+            document.getElementById('final-score-text').innerText = score;
+            document.getElementById('final-accuracy-text').innerText = `${accuracy}%`;
+
+            document.getElementById('final-rank-title').innerText = 'Chúc mừng bạn đã hoàn thành hành trình!';
+        }
+
+        // -------------------------------------------------------------------
+        // AUXILIARY CONTROLS
+        // -------------------------------------------------------------------
+        function switchTab(num) {
+            for (let i = 1; i <= 6; i++) {
+                document.getElementById(`c-panel-${i}`).classList.add('hidden');
+                document.getElementById(`t-btn-${i}`).className = 'px-4 py-2 rounded font-bold text-sm bg-surface-container text-on-surface-variant border border-outline/20';
+            }
+            document.getElementById(`c-panel-${num}`).classList.remove('hidden');
+            document.getElementById(`t-btn-${num}`).className = 'px-4 py-2 rounded font-bold text-sm bg-burgundy-deep text-primary border border-primary';
+        }
+
+        const milestoneDetails = {
+            '1986': { title: "Đại hội VI khởi xướng đường lối Đổi mới toàn diện", body: "Khởi xướng đường lối Đổi mới toàn diện, xóa bỏ bao cấp, thực hiện 3 chương trình kinh tế lớn." },
+            '1987': { title: "Chính sách 4 Giảm & Quyết định 217-HĐBT", body: "Giải quyết phân phối lưu thông, trao quyền tự chủ hạch toán cho Doanh nghiệp Nhà nước." },
+            '1988': { title: "Đột phá Khoán 10 & Xóa Bỏ Tem Phiếu", body: "Nông dân nhận đất 15 năm; xóa bỏ hoàn toàn tem phiếu bao cấp cuối năm 1988." },
+            '1989': { title: "Kỳ tích Xuất khẩu Gạo & HNTW 6", body: "Lần đầu tự túc và xuất khẩu 1.4 triệu tấn gạo. Rút quân tình nguyện khỏi Campuchia." },
+            '1991': { title: "Đại hội VII - Cương lĩnh 1991 & Chiến lược 2000", body: "Xác định rõ mô hình kinh tế thị trường định hướng XHCN, đặt mục tiêu gấp đôi GDP." },
+            '1995': { title: "Bước ngoặt Ngoại giao Lịch sử", body: "Bình thường hóa quan hệ Việt - Mỹ (11/7) & Gia nhập ASEAN (28/7)." },
+            '1996': { title: "Đại hội VIII - Thoát khỏi khủng hoảng 20 năm", body: "Chính thức tuyên bố ra khỏi cuộc khủng hoảng kinh tế – xã hội kéo dài 20 năm!" }
+        };
+
+        function showMilestoneModal(yr) {
+            const d = milestoneDetails[yr];
+            if (!d) return;
+            document.getElementById('modal-year-tag').innerText = `NĂM ${yr}`;
+            document.getElementById('modal-title').innerText = d.title;
+            document.getElementById('modal-body').innerText = d.body;
+            document.getElementById('milestone-modal').classList.remove('hidden');
+        }
+
+        function closeMilestoneModal() {
+            document.getElementById('milestone-modal').classList.add('hidden');
+        }
+
+        const slideData = [
+            { title: "I. BỐI CẢNH TRƯỚC ĐỔI MỚI (1986)", content: "Khủng hoảng KT-XH nghiêm trọng. Lạm phát phi mã 774.7% năm 1986. Duy trì quá lâu cơ chế bao cấp." },
+            { title: "II. ĐẠI HỘI VI (12/1986)", content: "Phương châm: 'Nhìn thẳng vào sự thật'. Thừa nhận nền kinh tế nhiều thành phần và 3 chương trình kinh tế lớn." },
+            { title: "III. CHÍNH SÁCH 1987–1990", content: "Chính sách 4 Giảm, Quyết định 217, Khoán 10 (04/1988), Xóa bỏ tem phiếu cuối 1988." },
+            { title: "IV. KẾT QUẢ BƯỚC ĐẦU 1986–1990", content: "Lạm phát giảm từ 774.7% xuống 67.4%. Từ nhập gạo vươn lên xuất khẩu 1.4 triệu tấn gạo năm 1989." },
+            { title: "V. ĐẠI HỘI VII & CƯƠNG LĨNH 1991", content: "Cương lĩnh 1991 và Chiến lược 2000. Kinh tế thị trường định hướng XHCN, Hiến pháp 1992." },
+            { title: "VI. THOÁT KHỦNG HOẢNG (1995–1996)", content: "Ngoại giao 1995 (ASEAN, Hoa Kỳ). Đại hội VIII (1996) tuyên bố chính thức thoát khỏi khủng hoảng 20 năm!" }
+        ];
+
+        let currentSlideIdx = 0;
+
+        function toggleSlideMode() {
+            const modal = document.getElementById('slide-modal');
+            modal.classList.toggle('hidden');
+            if (!modal.classList.contains('hidden')) {
+                currentSlideIdx = 0;
+                renderSlide();
+            }
+        }
+
+        function renderSlide() {
+            const s = slideData[currentSlideIdx];
+            document.getElementById('slide-index-indicator').innerText = `Slide ${currentSlideIdx + 1} / ${slideData.length}`;
+            document.getElementById('slide-content-area').innerHTML = `
             <div class="inline-block px-4 py-1.5 bg-burgundy-deep text-secondary text-sm font-bold rounded-full mb-6">CHUYÊN ĐỀ ${currentSlideIdx + 1}</div>
             <h2 class="text-3xl md:text-5xl font-extrabold text-primary mb-6 leading-tight">${s.title}</h2>
             <p class="text-lg md:text-2xl text-on-surface/90 leading-relaxed max-w-3xl mx-auto italic font-body-lg">${s.content}</p>
         `;
-    }
-
-    function nextSlide() {
-        if (currentSlideIdx < slideData.length - 1) { currentSlideIdx++; renderSlide(); }
-    }
-
-    function prevSlide() {
-        if (currentSlideIdx > 0) { currentSlideIdx--; renderSlide(); }
-    }
-
-    document.addEventListener('keydown', (e) => {
-        const modal = document.getElementById('slide-modal');
-        if (!modal.classList.contains('hidden')) {
-            if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
-            if (e.key === 'ArrowLeft') prevSlide();
-            if (e.key === 'Escape') toggleSlideMode();
-            return;
         }
-        if (e.key === 'p' || e.key === 'P') togglePause();
-    });
 
-    function scrollToSection(id) {
-        document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-    }
-</script>
+        function nextSlide() {
+            if (currentSlideIdx < slideData.length - 1) { currentSlideIdx++; renderSlide(); }
+        }
+
+        function prevSlide() {
+            if (currentSlideIdx > 0) { currentSlideIdx--; renderSlide(); }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            const modal = document.getElementById('slide-modal');
+            if (!modal.classList.contains('hidden')) {
+                if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+                if (e.key === 'ArrowLeft') prevSlide();
+                if (e.key === 'Escape') toggleSlideMode();
+                return;
+            }
+            if (e.key === 'p' || e.key === 'P') togglePause();
+        });
+
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
+
 </html>
